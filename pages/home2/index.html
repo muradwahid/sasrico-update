@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- tailwindcss -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- style css -->
+  <link rel="stylesheet" href="/pages/home2/style.css">
+  <link rel="stylesheet" href="/assests/style/nav.css">
+  <link rel="stylesheet" href="../../assests/style/responsive.css">
+  <link rel="stylesheet" href="../../assests/style/responsive.css">
+  <!-- font-awesome -->
+  <script src="https://kit.fontawesome.com/14d27916cf.js" crossorigin="anonymous"></script>
+  <!-- swiperjs -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="absolute py-6 transition-all duration-300 w-full z-40 ">
+    <nav class="container mx-auto flex justify-between items-center  relative">
+      <div class="lg:block hidden">
+        <div class="flex items-center gap-9">
+          <!-- logo section -->
+          <div>
+            <h6 class="italic text-white">Sasrico<span class="text-[#FF4847]">.</span></h6>
+          </div>
+          <!-- route section -->
+          <div>
+            <ul class="flex items-center gap-6">
+              <li class="relative routeName"><a href="/"
+                  class="flex items-center gap-2 cursor-pointer hover:text-[#FF9515] text-white"><span
+                    class="font-medium">Home</span> <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="bg-white px-5 py-4 w-[120px] absolute transition-all duration-300 routeNameChild">
+                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium hover:text-[#FF9515]"><a
+                      href="/">Home-1</a></li>
+                  <li
+                    class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium py-3 hover:text-[#FF9515]">
+                    <a href="/pages/home2/index.html">Home-2</a>
+                  </li>
+                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium hover:text-[#FF9515]"><a
+                      href="/pages/home3/index.html">Home-3</a></li>
+                </ul>
+              </li>
+              <li class="flex items-center gap-2 cursor-pointer"><a href="/pages/about/index.html"
+                  class="font-medium text-white hover:text-[#FF9515]">About</a>
+              </li>
+              <li class="flex items-center gap-2 cursor-pointer"><a
+                  class="font-medium text-white hover:text-[#FF9515]">Services</a>
+              </li>
+
+              <li class="flex items-center gap-2 hover:text-[#FF9515] cursor-pointer"><a
+                  class="font-medium text-white hover:text-[#FF9515]">Fetures</a>
+              </li>
+              <li class="relative routeName"><a href="/"
+                  class="flex items-center gap-2 cursor-pointer hover:text-[#FF9515] text-white"><span
+                    class="font-medium ">Blog</span> <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="bg-white px-5 py-4 w-[150px] absolute transition-all duration-300 routeNameChild">
+                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium hover:text-[#FF9515]"><a
+                      href="/pages/blog/index.html">Blog</a></li>
+                  <li
+                    class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium py-3 hover:text-[#FF9515]">
+                    <a href="/pages/blogdetails/index.html">Blog Details</a>
+                  </li>
+
+                </ul>
+              </li>
+              <li class="flex items-center gap-2 hover:text-[#FF9515] cursor-pointer text-white"><a
+                  href="/pages/contact/index.html" class="font-medium">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- responsive section start -->
+      <div class="lg:hidden block">
+        <div class="flex items-center gap-4">
+          <div class="toggle cursor-pointer bg-slate-200 h-8 w-8 flex items-center justify-center rounded-full">
+            <i class="fa-solid fa-bars hamburger"></i>
+            <i id="xMark" class="fa-solid fa-xmark hidden"></i>
+          </div>
+          <div>
+            <h6 class="italic text-white sm:block hidden">Sasrico<span class="text-[#FF4847]">.</span></h6>
+          </div>
+        </div>
+      </div>
+      <!-- responsive section end -->
+      <!-- log in section -->
+      <div class="flex">
+        <button class="text-[14px] text-white font-semibold tracking-[-0.05px] px-6 py-[6px] rounded-md">Log in</button>
+        <button
+          class="text-[14px] font-semibold tracking-[-0.05px] bg-[#0E0605] text-white px-6 py-[6px] rounded-md">Get
+          stared</button>
+      </div>
+      <!-- sidebar section -->
+      <div
+        class="absolute top-20 z-50 lg:hidden bg-[#FF9515] w-48 pl-6 transition-all duration-500 sidebarNav py-5 h-[80vh]">
+        <a class="" href="/">
+          <h6 class="italic">Sasrico<span class="text-[#fff]">.</span></h6>
+        </a>
+        <ul class="text-white mt-3">
+          <li class="font-medium flex items-center gap-2 homePage"><a href="#">Home</a> <i
+              class="fa-solid fa-caret-down homeCaret"></i></li>
+          <div class="homeChild ml-3 mt-2">
+            <div class="grid gap-2">
+              <a class="font-medium hover:underline" href="/">Home-1</a>
+              <a class="font-medium hover:underline" href="./index.html">Home-2</a>
+              <a class="font-medium hover:underline" href="../home3/index.html">Home-3</a>
+            </div>
+          </div>
+          <li class="font-medium flex hover:underline items-center gap-2 my-2"><a href="../about/index.html">About</a>
+          </li>
+          <li class="font-medium flex hover:underline items-center gap-2"><a href="../services/index.html">Services</a>
+          </li>
+          <li class="font-medium flex hover:underline items-center gap-2 my-2"><a
+              href="../fetures/index.html">Fetures</a></li>
+          <li class="font-medium flex items-center gap-2 blogPage"><a>Blog</a> <i
+              class="fa-solid fa-caret-down blogCaret"></i>
+          </li>
+          <div class="blogChild ml-3 mt-2 hidden">
+            <div class="grid gap-2">
+              <a class="font-medium hover:underline" href="../blog/index.html">Blog</a>
+              <a class="font-medium hover:underline" href="../blogdetails/index.html">Blog Details</a>
+            </div>
+          </div>
+          <li class="font-medium flex items-center hover:underline gap-2 mt-2"><a
+              href="../contact/index.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+  <main>
+    <!-- hero section start -->
+    <section class="mb-52 relative 2xl:h-[1100px] lg:h-[165vh] md:h-[190vh] sm:h-[200vh] h-[230vh]">
+      <div class="bg-primary pt-32 2xl:h-[910px] lg:h-[150vh] md:h-[175vh] sm:h-[185vh] h-[215vh]">
+        <div>
+          <div class=" lg:w-[70%] md:w-[80%] container mx-auto text-center relative">
+            <div class="absolute -left-12">
+              <img src="https://i.ibb.co/HC8cdH9/Element-2.png" alt="">
+            </div>
+            <div class="absolute top-[50%]">
+              <img src="https://i.ibb.co/mTX0bB1/Element-3.png" alt="">
+            </div>
+            <div class="absolute right-0 bottom-[25%]">
+              <img src="https://i.ibb.co/C09Y1td/Element-4.png" alt="">
+            </div>
+            <h1 class="leading-[76px] text-[72px] font-bold text-white">Boosts your marketing & sales with Sasrico</h1>
+            <div class="mt-6 lg:w-[580px] md:w-[64%] mx-auto">
+              <p class="text-white opacity-90 text-[18px] font-medium leading-7 text-center">
+                There is a time management facility through this modern software.
+                Effective time management allows you to achieve great results .
+              </p>
+              <div class="flex bg-white justify-between w-full rounded-[6px] mt-[48px]">
+                <div class="relative w-[65%]">
+                  <input class="pl-12 py-3 w-full rounded-l-[6px]" type="email" placeholder="Enter your mail">
+                  <i class="fa-regular fa-envelope absolute left-5 top-1/2 translate-y-[-50%]"></i>
+                </div>
+                <div>
+                  <button
+                    class="bg-secondary py-[14px] rounded-r-[6px] text-white md:px-6 px-2 font-medium leading-5">Get
+                    stared</button>
+                </div>
+              </div>
+            </div>
+            <ul class="flex items-center flex-wrap gap-[18px] justify-center mt-[26px]">
+              <li class="font-medium leading-6 text-white opacity-90 flex items-center gap-3"><i
+                  class="fa-solid fa-check text-secondary"></i>
+                <p>No credit card is required</p>
+              </li>
+              <li class="font-medium leading-6 text-white opacity-90 flex items-center gap-3"><i
+                  class="fa-solid fa-check text-secondary"></i>
+                <p>Get 15 days free trial</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- dashboard section start -->
+        <section class="mb-[250px] relative z-50 mt-[80px]">
+          <div class="container mx-auto bg-[#F9FAFF] rounded-t-[24px]">
+            <div class="w-full bg-black px-4 rounded-t-[24px] flex items-center gap-2 py-4">
+              <div class="h-[8.12px] w-[8.12px] rounded-full bg-[#EB5757]"></div>
+              <div class="h-[8.12px] w-[8.12px] rounded-full bg-[#F2C94C]"></div>
+              <div class="h-[8.12px] w-[8.12px] rounded-full bg-[#83BF6E]"></div>
+            </div>
+            <div class="lg:h-[573px] pl-[40px] pr-[29px] py-[18px] w-full flex gap-10 relative">
+              <div class="absolute top-[20%] -left-8">
+                <img src="https://i.ibb.co/LQKtFdF/Element-5.png" alt="">
+              </div>
+              <div class="absolute -right-10 bottom-[20%]">
+                <img src="https://i.ibb.co/gvysZdL/Element.png" alt="">
+              </div>
+              <div class="lg:block hidden relative bg-white px-4 rounded-[13px]">
+                <div class="absolute -bottom-20">
+                  <img src="https://i.ibb.co/yy8F8T0/Element-7.png" alt="">
+                </div>
+                <p class="text-[16.25px] font-bold italic mb-8">saasco<span class="text-[#FF6A55]">.</span></p>
+                <div class="">
+                  <div class="mb-[41px]">
+                    <div class="h-[8.11px] w-[79.62px] rounded-full bg-[#F8F8F8]"></div>
+                    <div class="h-[8.11px] w-[52.81px] mt-2 rounded-full bg-[#F8F8F8]"></div>
+                  </div>
+                  <div class="grid gap-[37.3px]">
+                    <div class="h-[8.11px] w-[121.06px] rounded-full bg-[#F8F8F8]"></div>
+                    <div class="h-[8.11px] w-[121.06px] rounded-full bg-[#F8F8F8]"></div>
+                    <div class="h-[8.11px] w-[121.06px] rounded-full bg-[#F8F8F8]"></div>
+                    <div class="h-[8.11px] w-[121.06px] rounded-full bg-[#F8F8F8]"></div>
+                    <div class="h-[8.11px] w-[121.06px] rounded-full bg-[#F8F8F8]"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full">
+                <div class="flex items-center justify-between mb-6">
+                  <div>
+                    <h5 class="leading-[29px] tracking-[-0.02em]">Hi, Smith</h5>
+                    <p class="text-[#808D9E] text-[11.375px] leading-[18px] mt-[6.5px]">Your sales analytics this week
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-magnifying-glass text-[#1D1E25] text-[15.44px]"></i>
+                    <p class="text-[#1D1E25] opacity-40 text-[14.625px] font-medium">Search here</p>
+                  </div>
+                </div>
+                <div class="grid gap-[30px] lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+                  <div class="dashboardCard flex flex-col justify-between rounded-[13px] px-3 pb-6 pt-8 bg-white">
+                    <div class="mb-6">
+                      <img src="https://i.ibb.co/pXqX1nM/Line-Chart.png" alt="">
+                    </div>
+                    <div class="flex gap-3">
+                      <div
+                        class="bg-[#FEF3F2] mt-[6px] h-[21.12px] w-[21.12px] flex items-center justify-center  rounded-[6.5px]">
+                        <i class="fa-solid fa-angles-down text-[12px] text-[#FF6A55]"></i>
+                      </div>
+                      <div>
+                        <div class="flex items-center gap-3">
+                          <p class="text-[26px] font-bold leading-8">10.9K</p>
+                          <p class="text-[11.375px] leading-[15px] text-[#FF6A55]">-7.3%</p>
+                        </div>
+                        <p class="text-[9.75px] text-[#808D9E] mt-1">Compared from Last Week</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dashboardCard flex flex-col justify-between rounded-[13px] px-3 pb-6 pt-8 bg-white">
+                    <div class="mb-6">
+                      <img src="https://i.ibb.co/vxFhwfk/Line-Chart-1.png" alt="">
+                    </div>
+                    <div class="flex gap-3">
+                      <div
+                        class="bg-[#ECFDF3] mt-[6px] h-[21.12px] w-[21.12px] flex items-center justify-center  rounded-[6.5px]">
+                        <i class="fa-solid fa-angles-down text-[12px] text-[#83BF6E] rotate-[180deg]"></i>
+                      </div>
+                      <div>
+                        <div class="flex items-center gap-3">
+                          <p class="text-[26px] font-bold leading-8">$2.1M</p>
+                          <p class="text-[11.375px] leading-[15px] text-[#83BF6E]">+2.4%</p>
+                        </div>
+                        <p class="text-[9.75px] text-[#808D9E] mt-1">Compared from Last Week</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dashboardCard flex flex-col justify-between rounded-[13px] px-3 pb-6 pt-8 bg-white">
+                    <div class="mb-6">
+                      <img src="https://i.ibb.co/G9jB3C9/Line-Chart-2.png" alt="">
+                    </div>
+                    <div class="flex gap-3">
+                      <div
+                        class="bg-[#FEF3F2] mt-[6px] h-[21.12px] w-[21.12px] flex items-center justify-center  rounded-[6.5px]">
+                        <i class="fa-solid fa-angles-down text-[12px] text-[#FF6A55]"></i>
+                      </div>
+                      <div>
+                        <div class="flex items-center gap-3">
+                          <p class="text-[26px] font-bold leading-8">$982K</p>
+                          <p class="text-[11.375px] leading-[15px] text-[#FF6A55]">-9.7%</p>
+                        </div>
+                        <p class="text-[9.75px] text-[#808D9E] mt-1">Compared from Last Week</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dashboardCard flex flex-col justify-between rounded-[13px] px-3 pb-6 pt-8 bg-white">
+                    <div class="mb-6">
+                      <img src="https://i.ibb.co/6Dz9TpT/Line-Chart-3.png" alt="">
+                    </div>
+                    <div class="flex gap-3">
+                      <div
+                        class="bg-[#ECFDF3] mt-[6px] h-[21.12px] w-[21.12px] flex items-center justify-center  rounded-[6.5px]">
+                        <i class="fa-solid fa-angles-down text-[12px] text-[#83BF6E] rotate-[180deg]"></i>
+                      </div>
+                      <div>
+                        <div class="flex items-center gap-3">
+                          <p class="text-[26px] font-bold leading-8">120.99K</p>
+                          <p class="text-[11.375px] leading-[15px] text-[#83BF6E]">+12%</p>
+                        </div>
+                        <p class="text-[9.75px] text-[#808D9E] mt-1">Compared from Last Week</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-10 flex md:flex-row flex-col gap-10">
+                  <div class="bg-white dashboardCardFigure pt-[32px] pb-[48px] px-[19.5px] rounded-[20px] md:w-[74%]">
+                    <div class="flex items-center justify-between bg-white mb-9">
+                      <p class="text-[16.25px] leading-6 font-bold">Sales Figures</p>
+                      <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                          <i class="fa-solid fa-circle text-[4.06px]  text-[#8E59FF]"></i>
+                          <p class="text-[#667085] text-[9.75px] urbanistFont">Advertisement</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <i class="fa-solid fa-circle text-[4.06px]  text-[#01C0F6]"></i>
+                          <p class="text-[#667085] text-[9.75px] urbanistFont">Marketing</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex gap-5">
+                      <div class="flex flex-col justify-between">
+                        <p class="text-[#808D9E] text-[9.75px] leading-[13px]">12K</p>
+                        <p class="text-[#808D9E] text-[9.75px] leading-[13px]">10K</p>
+                        <p class="text-[#808D9E] text-[9.75px] leading-[13px]">8K</p>
+                        <p class="text-[#808D9E] text-[9.75px] leading-[13px]">6K</p>
+                        <p class="text-[#808D9E] text-[9.75px] leading-[13px]">4K</p>
+                        <p class="text-[#808D9E] text-[9.75px] leading-[13px]">2K</p>
+                      </div>
+                      <div class="w-full">
+                        <img class="w-full" src="https://i.ibb.co/g7HGqqr/Line-Chart-4.png" alt="">
+                      </div>
+                    </div>
+                    <div class="flex mt-4 items-start justify-between px-7">
+                      <p class="text-[#808D9E] text-[9.75px] leading-[13px]">9 am</p>
+                      <p class="text-[#808D9E] text-[9.75px] leading-[13px]">10 am</p>
+                      <p class="text-[#808D9E] text-[9.75px] leading-[13px]">11 am</p>
+                      <p class="text-[#808D9E] text-[9.75px] leading-[13px]">12 am</p>
+                      <p class="text-[#808D9E] text-[9.75px] leading-[13px]">1 pm</p>
+                      <p class="text-[#808D9E] text-[9.75px] leading-[13px]">2 pm</p>
+                      <p class="text-[#808D9E] text-[9.75px] leading-[13px]">3 pm</p>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-white px-5 pt-5 pb-[13.2px] md:w-[22%] dashboardCardFigure rounded-[20px] flex md:flex-col flex-row items-center gap-5">
+                    <div>
+                      <p class="text-[16.25px] font-bold leading-6 mb-[12.92px]">Sources</p>
+                      <div class="w-full relative">
+                        <div>
+                          <img class="md:w-full sm:w-[150px]" src="https://i.ibb.co/DbXwkWT/Pie-Chart.png" alt="">
+                        </div>
+                        <div class="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+                          <div class="text-center">
+                            <p class="text-[#808D9E] text-[13px] leading-[18px]">Total</p>
+                            <p class="text-[21.125px] font-bold">140.90K</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="mt-[18.69px] grid gap-[6.5px] w-full">
+                        <div class="flex items-center justify-between w-full">
+                          <div class="flex items-center gap-[6px]">
+                            <div class="h-[4.88px] w-[4.88px] rounded-full bg-[#8E59FF]"></div>
+                            <div class="h-[4.06px] w-[54.44px] rounded-full bg-[#F9FAFF]"></div>
+                          </div>
+                          <div>
+                            <p class="text-[11.375px] leading-[15px] font-bold">66.324K</p>
+                          </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                          <div class="flex items-center gap-[6px]">
+                            <div class="h-[4.88px] w-[4.88px] rounded-full bg-[#20BFF7]"></div>
+                            <div class="h-[4.06px] w-[54.44px] rounded-full bg-[#F9FAFF]"></div>
+                          </div>
+                          <div>
+                            <p class="text-[11.375px] leading-[15px] font-bold">35.244K</p>
+                          </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                          <div class="flex items-center gap-[6px]">
+                            <div class="h-[4.88px] w-[4.88px] rounded-full bg-[#FFBC99]"></div>
+                            <div class="h-[4.06px] w-[54.44px] rounded-full bg-[#F9FAFF]"></div>
+                          </div>
+                          <div>
+                            <p class="text-[11.375px] leading-[15px] font-bold">12.993K</p>
+                          </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                          <div class="flex items-center gap-[6px]">
+                            <div class="h-[4.88px] w-[4.88px] rounded-full bg-[#83BF6E]"></div>
+                            <div class="h-[4.06px] w-[54.44px] rounded-full bg-[#F9FAFF]"></div>
+                          </div>
+                          <div>
+                            <p class="text-[11.375px] leading-[15px] font-bold">8.293K</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- dashboard section end -->
+      </div>
+      <div class="h-[30vh] w-full bg-white z-30 rounded-[100%] absolute bottom-0">
+      </div>
+    </section>
+    <!-- hero section end -->
+
+    <!-- story section start -->
+    <section class="storySection container mx-auto flex justify-between gap-7 lg:flex-row flex-col">
+      <div class="lg:w-[38%]">
+        <p class="text-[18px] font-medium text-secondary leading-7">WATCH THEIR STORY</p>
+        <h2 class="leading-[52px] tracking-[-0.02em] mt-5">Overall <span class="text-secondary">13k teams</span>
+          use Saasco platform</h2>
+        <p class="text-[18px] text-[#808D9E] font-medium leading-7 mt-[30px]">Donec bibendum, dui id ultrices molestie,
+          neque neque
+          porta felis, id viverra ligula justo interdum mi.</p>
+      </div>
+      <div class="flex items-center flex-wrap">
+        <div class="px-[83px] py-7">
+          <h1 class="leading-[76px] mb-[6px]">4.9</h1>
+          <div>
+            <i class="fa-solid fa-star text-[16px] text-[#FF6A55]"></i>
+            <i class="fa-solid fa-star text-[16px] text-[#FF6A55]"></i>
+            <i class="fa-solid fa-star text-[16px] text-[#FF6A55]"></i>
+            <i class="fa-solid fa-star text-[16px] text-[#FF6A55]"></i>
+            <i class="fa-solid fa-star text-[16px] text-[#FF6A55]"></i>
+          </div>
+          <p class="text-[18px] font-medium text-[#808D9E] mt-3">Capterra</p>
+        </div>
+        <div class="px-[83px] py-7">
+          <h1 class="leading-[76px] mb-[6px]">4.8</h1>
+          <div>
+            <i class="fa-solid fa-star text-[16px] text-[#FF6A55]"></i>
+            <i class="fa-solid fa-star text-[16px] text-[#FF6A55]"></i>
+            <i class="fa-solid fa-star text-[16px] text-[#FF6A55]"></i>
+            <i class="fa-solid fa-star text-[16px] text-[#FF6A55]"></i>
+            <i class="fa-solid fa-star text-[16px] text-[#FF6A55]"></i>
+          </div>
+          <p class="text-[18px] font-medium text-[#808D9E] mt-3">Trustpilot</p>
+        </div>
+      </div>
+    </section>
+    <!-- story section end -->
+
+    <!-- features section start -->
+    <section class="bg-[#E0F6F1] mt-[150px] mb-32 py-[68px] -z-20">
+      <div class="container mx-auto relative">
+        <div class="absolute sm:block hidden z-10">
+          <img class="" src="https://i.ibb.co/XDTQHDC/Element-9.png" alt="">
+        </div>
+        <div class="absolute right-24 top-28 sm:block hidden">
+          <img src="https://i.ibb.co/DRHM0BH/Element-8.png" alt="">
+        </div>
+        <div>
+          <p class="text-[18px] font-medium leading-7 text-secondary text-center mb-4">Features</p>
+          <h2 class="!text-[60px] text-center leading-[64px] tracking-[-0.03em]">Explore our <br
+              class="md:block hidden">
+            amazing <span class="text-secondary">features</span></h2>
+          <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-[56px] gap-y-20">
+            <div class="w-[270px]">
+              <div class="bg-primary h-[54px] w-[54px] rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-gear text-[20px] text-white"></i>
+              </div>
+              <h5 class="leading-[30px] tracking-[-0.5px] mt-5">Analyze your data</h5>
+              <p class="text-[#808D9E] font-medium leading-6 mt-4">Resource management is the process of pre-planning,
+                scheduli</p>
+            </div>
+            <div class="w-[270px]">
+              <div class="bg-primary h-[54px] w-[54px] rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-user-group text-[18px] text-white"></i>
+              </div>
+              <h5 class="leading-[30px] tracking-[-0.5px] mt-5">Collaborate securely</h5>
+              <p class="text-[#808D9E] font-medium leading-6 mt-4">Resource management is the process of pre-planning,
+                scheduli</p>
+            </div>
+            <div class="w-[270px]">
+              <div class="bg-primary h-[54px] w-[54px] rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-chart-line text-[22px] text-white"></i>
+              </div>
+              <h5 class="leading-[30px] tracking-[-0.5px] mt-5">Embedded analytics</h5>
+              <p class="text-[#808D9E] font-medium leading-6 mt-4">Resource management is the process of pre-planning,
+                scheduli</p>
+            </div>
+            <div class="w-[270px]">
+              <div class="bg-primary h-[54px] w-[54px] rounded-full flex items-center justify-center">
+                <i class="fa-regular fa-file-lines text-[20px] text-white"></i>
+              </div>
+              <h5 class="leading-[30px] tracking-[-0.5px] mt-5">Unified reporting</h5>
+              <p class="text-[#808D9E] font-medium leading-6 mt-4">Resource management is the process of pre-planning,
+                scheduli</p>
+            </div>
+            <div class="w-[270px]">
+              <div class="bg-primary h-[54px] w-[54px] rounded-full flex items-center justify-center">
+                <i class="fa-regular fa-lightbulb text-[20px] text-white"></i>
+              </div>
+              <h5 class="leading-[30px] tracking-[-0.5px] mt-5">Advanced inventory</h5>
+              <p class="text-[#808D9E] font-medium leading-6 mt-4">Resource management is the process of pre-planning,
+                scheduli</p>
+            </div>
+            <div class="w-[270px]">
+              <div class="bg-primary h-[54px] w-[54px] rounded-full flex items-center justify-center">
+                <img src="../../assests/images/icon/fan.png" alt="">
+              </div>
+              <h5 class="leading-[30px] tracking-[-0.5px] mt-5">Optimize workflow</h5>
+              <p class="text-[#808D9E] font-medium leading-6 mt-4">Resource management is the process of pre-planning,
+                scheduli</p>
+            </div>
+          </div>
+          <div class="bg-[#E9ECF2] w-full h-[6px] rounded-full mt-[72px] mb-[70px]">
+            <div class="bg-[#1D1E25] h-[6px] rounded-full w-[37%]"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- features section end -->
+
+    <!-- powerfull analytics section start -->
+    <section class="container mx-auto">
+      <div class="flex lg:gap-44 gap-12 items-center lg:flex-row flex-col-reverse">
+        <div class="lg:w-[45%]">
+          <div>
+            <p class="text-[18px] text-secondary font-medium leading-7 uppercase mb-4">powerfull analytics</p>
+            <h2 class="!text-[60px] leading-[64px] mb-[30px]">Effortlessly to track all user <span
+                class="text-secondary">analytics</span></h2>
+            <p class="text-[#808D9E] text-[18px] font-medium leading-7 border-b pb-6">Donec bibendum, dui id ultrices
+              molestie, neque
+              neque
+              porta felis, id viverra ligula justo interdum mi.</p>
+          </div>
+          <div class="flex gap-12 sm:flex-row flex-col mt-10">
+            <div>
+              <div class="h-[48px] w-[48px] rounded-full bg-secondary flex items-center justify-center mb-5">
+                <i class="fa-solid fa-gear text-[18px] text-white"></i>
+              </div>
+              <p class="text-[20px] font-bold leading-[26px] tracking-[-0.5px] mb-4">Powerful dashboard</p>
+              <p class="font-medium text-[#808D9E] leading-6">Combine multiple reports into a single dashboard</p>
+            </div>
+            <div>
+              <div class="h-[48px] w-[48px] rounded-full bg-primary flex items-center justify-center mb-5">
+                <i class="fa-solid fa-gear text-[18px] text-white"></i>
+              </div>
+              <p class="text-[20px] font-bold leading-[26px] tracking-[-0.5px] mb-4">Always in Sync</p>
+              <p class="font-medium text-[#808D9E] leading-6">Don’t worry abut the data, always be synchronized</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-[45%]">
+          <div class="w-full relative">
+            <img class="w-full" src="https://i.ibb.co/rxsvfnC/Img.png" alt="">
+            <div
+              class="px-5 py-[15px] flex items-center gap-4 sm:w-[293px] w-[240px] analyticsCard rounded-[10px] bg-white absolute bottom-32 -left-16 z-10">
+              <div><img src="https://i.ibb.co/4wLqn0b/placeholder.png" alt=""></div>
+              <div>
+                <p class="text-[13px] font-medium leading-4">Jessie Yates</p>
+                <p class="text-[10px] text-[#1D1E25] opacity-40 font-medium leading-4 mt-[6px]">Project Manager, USA</p>
+              </div>
+            </div>
+            <div
+              class="px-5 py-[15px] flex items-center gap-4 sm:w-[293px] w-[240px] analyticsCard2 rounded-[10px] bg-white absolute bottom-10 -left-12">
+              <div><img src="https://i.ibb.co/3SdS9zQ/placeholder-1.png" alt=""></div>
+              <div>
+                <p class="text-[13px] font-medium leading-4">Brain Foer</p>
+                <p class="text-[10px] text-[#1D1E25] opacity-40 font-medium leading-4 mt-[6px]">CEO & Founder</p>
+              </div>
+            </div>
+            <div class="absolute top-12 -left-11">
+              <img src="https://i.ibb.co/DRHM0BH/Element-8.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- powerfull analytics section end -->
+
+    <!-- Collaborate section start -->
+    <section class="bg-[#E0F6F1] py-[120px] mt-32">
+      <div class="container mx-auto flex lg:gap-[100px] lg:flex-row flex-col relative">
+        <div class="absolute -right-8 -bottom-20">
+          <img src="https://i.ibb.co/Hxz7TLr/Element-11.png" alt="">
+        </div>
+        <div class="lg:w-1/2">
+          <img class="w-full h-full" src="https://i.ibb.co/wsHPr5M/Img-1.png" alt="">
+        </div>
+        <div class="lg:w-1/2">
+          <p class="text-[18px] text-secondary font-medium leading-7 uppercase">Collaborate</p>
+          <h1 class="!text-[60px] mt-4 leading-[64px] tracking-[-0.03em]">Collaborate with your <span
+              class="text-secondary">team</span> easily</h1>
+          <p class="text-[#808D9E] text-[18px] font-medium leading-7 mt-[30px]">Donec bibendum, dui id ultrices
+            molestie, neque neque porta felis, id viverra ligula justo interdum mi.</p>
+          <ul class="grid sm:grid-cols-2 gap-y-3 mt-8">
+            <li class="text-[18px] font-medium leading-7 text-[ #1D1E25] flex items-center gap-3"><i
+                class="fa-solid fa-circle-check"></i>
+              <p>Organize your data</p>
+            </li>
+            <li class="text-[18px] font-medium leading-7 text-[ #1D1E25] flex items-center gap-3"><i
+                class="fa-solid fa-circle-check"></i>
+              <p>Always in sync</p>
+            </li>
+            <li class="text-[18px] font-medium leading-7 text-[ #1D1E25] flex items-center gap-3"><i
+                class="fa-solid fa-circle-check"></i>
+              <p>Work with any team</p>
+            </li>
+            <li class="text-[18px] font-medium leading-7 text-[ #1D1E25] flex items-center gap-3"><i
+                class="fa-solid fa-circle-check"></i>
+              <p>Embedded analytics</p>
+            </li>
+            <li class="text-[18px] font-medium leading-7 text-[ #1D1E25] flex items-center gap-3"><i
+                class="fa-solid fa-circle-check"></i>
+              <p>Business analytics</p>
+            </li>
+          </ul>
+          <div>
+            <button
+              class="mt-11 leading-5 font-bold tracking-[-0.5px] border border-[#808D9E] px-6 py-[10px] rounded-[8px] transition-all duration-300 cursor-pointer hover:text-white hover:bg-[#FF9515] hover:border-[#FF9515]">Get
+              started now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Collaborate section end -->
+
+    <!-- business owners section start -->
+    <section class="bg-[#2FC6A2] pb-[130px] pt-[130px]">
+      <div class="container mx-auto">
+        <div class="flex 2xl:justify-between lg:gap-32 gap-10 items-center lg:flex-row flex-col-reverse mb-[88px]">
+          <div class="lg:w-[470px]">
+            <h3 class="text-white leading-[42px] tracking-[-0.02em]">“Connect to a multitude of sources like files and
+              feeds, popular business apps, cloud and onpremise databases, custom
+              apps and more”</h3>
+            <div class="flex items-center gap-5 border-t border-[#1D1E25] pt-[25px] mt-[25px]">
+              <div class="h-[55px] w-[60px] flex items-center justify-center bg-secondary">
+                <img src="https://i.ibb.co/WKhF40V/ri-double-quotes-l.png" alt="">
+              </div>
+              <div>
+                <h6 class="leading-6 tracking-[-0.05px] text-white">Jonah Jameson</h6>
+                <p class="font-medium leading-[26px] tracking-[-0.5px] text-white opacity-80 mt-[6px]">CEO of Youngtech
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="2xl:w-[570px] lg:w-[500px]">
+            <div class="relative">
+              <img class="h-[400px] object-cover rounded-[24px]" src="https://i.ibb.co/jGqP9dR/Image-Bg.png" alt="">
+
+              <label for="my-modal" class="">
+                <div
+                  class="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] cursor-pointer flex items-center justify-center bg-white h-[54px] w-[54px] rounded-full">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+              </label>
+              <div class="absolute bottom-3 -left-12">
+                <img src="https://i.ibb.co/cyQyK7B/Element-12.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <!-- modal -->
+          <input type="checkbox" id="my-modal" class="modal-toggle" />
+          <div class="modal">
+            <div class="relative xl:w-[800px] xl:h-[500px] md:w-[500px] md:h-[300px]">
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/DZBGEVgL2eE" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+              <div class="absolute -top-6 -right-3">
+                <label for="my-modal"
+                  class="cursor-pointer bg-gray-200 py-2 px-[14px] rounded-full"><span>X</span></label>
+              </div>
+            </div>
+          </div>
+          <!-- modal -->
+        </div>
+        <div class="sm:block hidden">
+          <p class="divider"><span class="font-medium leading-[26px] tracking-[-0.5px] text-white opacity-80">Trusted by
+              world class business
+              owners</span></p>
+        </div>
+        <div class="text-center sm:hidden block">
+          <div class="border-b w-full border-[#1D1E25]"></div>
+          <span class="font-medium leading-[26px] tracking-[-0.5px] text-white opacity-80 text-center">Trusted by world
+            class business
+            owners</span>
+          <div class="border-b w-full border-[#1D1E25]"></div>
+        </div>
+
+        <!-- trusted compay carousel start -->
+        <div class="border-b border-[#1D1E25] py-7 ">
+          <div class="swiper-container overflow-hidden">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide ">
+                <div>
+                  <img src="https://i.ibb.co/DVYVbhm/Logo.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide ">
+                <div>
+                  <img src="https://i.ibb.co/5n9FXn7/Logo-1.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide ">
+                <div>
+                  <img src="https://i.ibb.co/DwPh6wG/Logo-2.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide ">
+                <div>
+                  <img src="https://i.ibb.co/VNtsb3y/Logo-3.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide ">
+                <div>
+                  <img src="https://i.ibb.co/09gRxFB/Logo-4.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide ">
+                <div>
+                  <img src="https://i.ibb.co/5n9FXn7/Logo-1.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide ">
+                <div>
+                  <img src="https://i.ibb.co/DVYVbhm/Logo.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide ">
+                <div>
+                  <img src="https://i.ibb.co/09gRxFB/Logo-4.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide ">
+                <div>
+                  <img src="https://i.ibb.co/5n9FXn7/Logo-1.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide ">
+                <div>
+                  <img src="https://i.ibb.co/DVYVbhm/Logo.png" alt="">
+                </div>
+              </div>
+            </div>
+
+            <!-- trusted compay carousel end -->
+            <div>
+
+            </div>
+
+          </div>
+        </div>
+    </section>
+    <!-- business owners section end -->
+
+    <!-- latest news section start -->
+    <section class="relative">
+      <div class="absolute bottom-40 -z-10">
+        <img src="https://i.ibb.co/tm0ZRQt/Frame-1000004857.png" alt="">
+      </div>
+      <div class="absolute sm:left-24 left-5 sm:top-20 top-24">
+        <img src="https://i.ibb.co/9ws8Cq5/Element-14.png" alt="">
+      </div>
+      <div class="absolute right-0 top-24">
+        <img src="https://i.ibb.co/D5t4CvM/Element-13.png" alt="">
+      </div>
+      <div class="container mx-auto pt-[170px]">
+        <p class="uppercase text-[18px] text-secondary font-medium leading-7">latest news</p>
+        <div class="flex items-center justify-between flex-wrap gap-5 mt-3">
+          <h1 class="!text-[60px] !leading-[64px] tracking-[0.03em]">Our latest updates</h1>
+          <button
+            class="text-white bg-secondary font-medium leading-5 tracking-[-0.5px] px-6 py-[10px] rounded-[8px] ">View
+            all</button>
+        </div>
+        <div class="grid mt-14 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px]">
+          <div>
+            <div>
+              <img class="w-full" src="https://i.ibb.co/NrKYHwq/Img.png" alt="">
+            </div>
+            <div class="mt-8 border-b pb-5">
+              <div class="flex gap-3">
+                <p
+                  class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                  cloud</p>
+                <p
+                  class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                  app development</p>
+              </div>
+              <h5 class="leading-[30px] tracking-[-1px] mt-4">15+ Most Effective and Proven Time Management Techniques
+              </h5>
+            </div>
+            <p class="font-medium leading-[26px] tracking-[-0.5px] mt-4">October 27, 2021 | 4 min read</p>
+          </div>
+          <div>
+            <div>
+              <img class="w-full" src="https://i.ibb.co/gSvCs8h/Img-1.png" alt="">
+            </div>
+            <div class="mt-8 border-b pb-5">
+              <div class="flex gap-3">
+                <p
+                  class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                  server</p>
+              </div>
+              <h5 class="leading-[30px] tracking-[-1px] mt-4">15+ Most Effective and Proven Time Management Techniques
+              </h5>
+            </div>
+            <p class="font-medium leading-[26px] tracking-[-0.5px] mt-4">October 27, 2021 | 4 min read</p>
+          </div>
+          <div>
+            <div>
+              <img class="w-full" src="https://i.ibb.co/JkY4krn/Img-2.png" alt="">
+            </div>
+            <div class="mt-8 border-b pb-5">
+              <div class="flex gap-3">
+                <p
+                  class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                  business</p>
+              </div>
+              <h5 class="leading-[30px] tracking-[-1px] mt-4">15+ Most Effective and Proven Time Management Techniques
+              </h5>
+            </div>
+            <p class="font-medium leading-[26px] tracking-[-0.5px] mt-4">October 27, 2021 | 4 min read</p>
+          </div>
+        </div>
+        <div class="bg-[#E9ECF2] w-full h-[6px] rounded-full mt-[72px] mb-[70px]">
+          <div class="bg-[#1D1E25] h-[6px] rounded-full w-[37%]"></div>
+        </div>
+      </div>
+    </section>
+    <!-- latest news section end -->
+
+    <!-- pricing plan section start -->
+    <section class="mt-32 mb-32">
+      <div class="container mx-auto">
+        <p class="text-[18px] text-secondary text-center font-medium leading-7">Pricing plan</p>
+        <h1 class="!text-[60px] leading-[64px] tracking-[-0.03em] text-center mt-4">Simple but effective</h1>
+        <div class="flex gap-8 justify-center mt-11">
+          <h6 class="leading-[26px] tracking-[-1px]">Pay Monthly</h6>
+          <div id="switchBtn" class="">
+            <div class="h-[24px] w-[24px] bg-white rounded-full cursor-pointer"></div>
+          </div>
+          <h6 class="leading-[26px] tracking-[-1px]">Pay Yearly</h6>
+        </div>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-[30px] mt-[100px]">
+          <div class="h-[512px] pricingCard border border-[#E9ECF2] rounded-[16px] px-8 py-[60px]">
+            <div class="flex justify-between">
+              <h3 class="text-[#2FC6A2] leading-[42px] tracking-[-0.02em]">Free</h3>
+              <p class="text-[18px] font-medium leading-7">Starter</p>
+            </div>
+            <p class="font-bold leading-5 tracking-[-1px] mt-1">/month</p>
+            <ul class="grid gap-3 mt-[46px]">
+              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
+                <p>Online transactions</p>
+              </li>
+              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
+                <p>ATH withdrawals</p>
+              </li>
+              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
+                <p>Easy control</p>
+              </li>
+              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
+                <p>Location-based security</p>
+              </li>
+              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
+                <p>Online Banking</p>
+              </li>
+            </ul>
+            <button
+              class="font-medium leading-5 tracking-[-0.5px] mt-12 text-white px-7 py-3 rounded-[8px] bg-[#2FC6A2]">Choose
+              plan</button>
+          </div>
+          <div class="h-[512px] pricingCard border border-[#E9ECF2] rounded-[16px] px-8 py-[60px]">
+            <div class="flex justify-between">
+              <h3 class="text-[#2FC6A2] leading-[42px] tracking-[-0.02em]">$49</h3>
+              <p class="text-[18px] font-medium leading-7">Premium</p>
+            </div>
+            <p class="font-bold leading-5 tracking-[-1px] mt-1">/month</p>
+            <ul class="grid gap-3 mt-[46px]">
+              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
+                <p>Online transactions</p>
+              </li>
+              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
+                <p>ATH withdrawals</p>
+              </li>
+              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
+                <p>Easy control</p>
+              </li>
+              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
+                <p>Location-based security</p>
+              </li>
+              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
+                <p>Online Banking</p>
+              </li>
+            </ul>
+            <button
+              class="font-medium leading-5 tracking-[-0.5px] mt-12 text-white px-7 py-3 rounded-[8px] bg-[#2FC6A2]">Choose
+              plan</button>
+          </div>
+          <div class="h-[512px] pricingCard border border-[#E9ECF2] rounded-[16px] px-8 py-[60px]">
+            <div class="flex justify-between">
+              <h3 class="text-[#2FC6A2] leading-[42px] tracking-[-0.02em]">$49</h3>
+              <p class="text-[18px] font-medium leading-7">Ultimate</p>
+            </div>
+            <p class="font-bold leading-5 tracking-[-1px] mt-1">/month</p>
+            <ul class="grid gap-3 mt-[46px]">
+              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
+                <p>Online transactions</p>
+              </li>
+              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
+                <p>ATH withdrawals</p>
+              </li>
+              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
+                <p>Easy control</p>
+              </li>
+              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
+                <p>Location-based security</p>
+              </li>
+              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
+                <p>Online Banking</p>
+              </li>
+            </ul>
+            <button
+              class="font-medium leading-5 tracking-[-0.5px] mt-12 text-white px-7 py-3 rounded-[8px] bg-[#2FC6A2]">Choose
+              plan</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- pricing plan section end -->
+
+    <!-- get started saasco section start -->
+    <section class="bg-[#E0F6F1]">
+      <div class="relative container mx-auto  pt-[250px] pb-[150px]">
+        <div class="absolute bottom-60 -right-10 sm:block hidden">
+          <img src="https://i.ibb.co/MPSpj25/Element-18.png" alt="">
+        </div>
+        <div class="absolute bottom-28 md:-left-10 sm:block hidden">
+          <img src="https://i.ibb.co/gvLvZfM/Element-17.png" alt="">
+        </div>
+        <div class="lg:left-[40px] lg:top-[220px] top-32 absolute">
+          <img src="https://i.ibb.co/Tb8rhTn/Avatar.png" alt="">
+        </div>
+        <div class="absolute lg:right-[40px] right-0 lg:top-[261px] top-40">
+          <img src="https://i.ibb.co/0y4YjSG/Avatar-1.png" alt="">
+        </div>
+        <div class="absolute md:bottom-[120px] md:right-[130px] right-1 sm:block hidden bottom-20 ">
+          <img src="https://i.ibb.co/QfTHdD3/Avatar-2.png" alt="">
+        </div>
+        <div class="absolute lg:bottom-[120px] bottom-44 lg:left-[130px] sm:block hidden left-10">
+          <img src="https://i.ibb.co/fqNXCyM/Avatar-3.png" alt="">
+        </div>
+        <div class="absolute left-1/2 top-[120px] translate-x-[-50%]">
+          <img src="https://i.ibb.co/gd6WS4R/Element-15.png" alt="">
+        </div>
+        <div class="">
+          <div>
+            <h1 class="leading-[76px] tracking-[-0.04em] text-center">Get started with <br>
+              Saasco for 14 days</h1>
+            <p class="text-[18px] text-[#808D9E] font-medium text-center mt-[30px]">Optimize for user experience and
+              privacy. Use social <br> login integrations, lower user friction.</p>
+            <div class="flex !z-10 items-center gap-6 md:flex-row flex-col justify-center mt-12">
+              <button class="px-7 py-3 bg-[#1D1E25] text-white rounded-[8px]">Get started</button>
+              <div class="flex items-center gap-3">
+                <label for="my-modal">
+                  <div
+                    class="bg-[#1d1e251a] h-[50px] w-[50px] rounded-full flex items-center justify-center cursor-pointer">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </label>
+                <p class="font-bold leading-5 tracking-[-1px]">Watch our platform!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- get started saasco section end -->
+
+    <!-- footer section start -->
+    <footer class="bg-[#2FC6A2] pt-[100px] pb-[80px] relative">
+      <div class="absolute right-20 -top-5">
+        <img src="https://i.ibb.co/Ss0j7QP/Element-16.png" alt="">
+      </div>
+      <div class="absolute left-8 top-14">
+        <img src="https://i.ibb.co/mb8r7Mq/Element.png" alt="">
+      </div>
+      <div class="absolute bottom-10">
+        <img src="https://i.ibb.co/gSRDXT3/Element-1.png" alt="">
+      </div>
+      <section class="container mx-auto">
+        <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4">
+          <div>
+            <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Product</p>
+            <ul>
+              <li class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50 ">Email Row</li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Free
+                Tools</li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Agents
+              </li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Blog
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Resources</p>
+            <ul>
+              <li class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50 ">Our Agents</li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Member
+                Stories</li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Video
+              </li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Free
+                trial</li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Company</p>
+            <ul>
+              <li class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50 ">Patnerships</li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Terms of
+                use</li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Privacy
+              </li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50">Sitemap
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Get in touch</p>
+            <p class="font-medium leading-5 text-white opacity-50">You’ll find your next Marketing valu you prefer.</p>
+            <div class="flex items-center gap-3 mt-[62px]">
+              <div class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white">
+                <i class="fa-brands fa-facebook-f text-[#2FC6A2]"></i>
+              </div>
+              <div class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white">
+                <i class="fa-brands fa-twitter text-[#2FC6A2]"></i>
+              </div>
+              <div class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white">
+                <i class="fa-brands fa-linkedin-in text-[#2FC6A2]"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between flex-wrap mt-[80px]">
+          <div>
+            <p class="text-[30px] font-bold italic text-white">Sasrico<span class="text-red-400">.</span></p>
+          </div>
+          <div>
+            <p class="font-medium text-white opacity-50">Copyright 2020.com, All rights reserved.</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- footer section end -->
+  </main>
+  <script src="/assests/script/nav.js"></script>
+  <script>
+    var swiper = new Swiper(".swiper-container", {
+      // Optional parameters
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
+      direction: "horizontal",
+      loop: true,
+      slidesPerView: 2,
+      spaceBetween: 10,
+      // Responsive breakpoints
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+        // when window width is >= 640px
+        740: {
+          slidesPerView: 4,
+          spaceBetween: 40
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 40
+        }
+      },
+
+    });
+
+    const switchBtn = document.querySelector('#switchBtn')
+    let isTrue = false;
+    switchBtn.addEventListener('click', () => {
+      // console.log(switchBtn.className='moon');
+      console.log(switchBtn);
+      if (isTrue) {
+        switchBtn.classList.remove('justify-end')
+        isTrue = false
+        console.log('remove');
+      } else {
+        switchBtn.classList.add("justify-end");
+        isTrue = true
+        console.log('add');
+      }
+    })
+
+  </script>
+</body>
+
+</html>

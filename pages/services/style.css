@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@200;400&family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 72px !important;
+  font-weight: 700 !important;
+  line-height: 76px;
+}
+
+h2 {
+  font-size: 60px !important;
+  font-weight: 700 !important;
+  line-height: 64px;
+  letter-spacing: -3%;
+}
+h3{
+  font-size: 36px !important;
+  font-weight: 700 !important;
+}
+h4 {
+  font-size: 24px !important;
+  line-height: 30px !important;
+  letter-spacing: -1px;
+  font-weight: 700 !important;
+}
+h6{
+    font-size: 20px !important;
+      font-weight: 700 !important;
+}
+
+.text_primary {
+  color: #FF4847;
+}
+
+.bg_primary {
+  background: #FF4847;
+}
+/* switch__ */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: black;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px black;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.hov:hover {
+  transition: .5s;
+  transform: translateY(-30px);
+}
+
+.hov:hover h3 {
+  color: white;
+}
+
+.hov:hover p {
+  color: white;
+}
+
+.hov:hover .hovi {
+  color: white;
+}
+
+.hov:hover button {
+  background: white;
+  color: black;
+}
+.feturesCard {
+  box-shadow: -15px 30px 48px rgba(29, 30, 37, 0.06);
+  height: 288px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.feturesCard:hover {
+  box-shadow: -15px 30px 48px rgba(29, 30, 37, 0.15);
+}
+.pricingCard {
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.pricingCard h3 {
+  transition: all .3s;
+}
+
+.pricingCard:hover {
+  margin-top: -35px;
+  background-color: #FF4847;
+  color: #fff;
+}
+
+.pricingCard:hover h3 {
+  color: #fff;
+}
+
+.pricingCard:hover button {
+  background-color: #fff;
+  color: #FF4847;
+}
+#switchBtn {
+  display: flex;
+  height: 32px;
+  width: 66px;
+  background-color: #1D1E25;
+  align-items: center;
+  padding: 0 4px;
+  border-radius: 50px;
+}
+.sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  transition: all .5s;
+  background-color: #ff474779;
+  backdrop-filter: blur(10px);
+  z-index: 100 !important;
+  box-shadow: 0px 0px 2px 3px #00000063;
+}
+.sticky .stickyText {
+  color: white;
+}
+head {
+  transition: all .5s;
+}

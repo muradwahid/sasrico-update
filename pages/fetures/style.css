@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #1D1E25;
+  background-color: #F8F8F8;
+  font-family: 'DM Sans', sans-serif !important;
+  overflow-x: hidden;
+}
+
+.urbanistFont {
+  font-family: 'Urbanist', sans-serif !important;
+}
+
+h1 {
+  font-size: 60px !important;
+  font-weight: 700 !important;
+}
+
+h2 {
+  font-size: 48px !important;
+  font-weight: 700 !important;
+}
+
+h3 {
+  font-size: 36px !important;
+  font-weight: 700 !important;
+}
+
+h5 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+h6 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.text-primary {
+  color: #FF4847 !important;
+}
+
+.bg-primary {
+  background-color: #FF4847 !important;
+}
+
+.feturesCard {
+  box-shadow: -15px 30px 48px rgba(29, 30, 37, 0.06);
+  height: 288px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.feturesCard:hover {
+  box-shadow: -15px 30px 48px rgba(29, 30, 37, 0.15);
+}
+
+.increseCard {
+  box-shadow: 12.873px 25.746px 41.1936px rgba(29, 30, 37, 0.1);
+}
+
+.divider:after,
+.divider:before {
+  background-color: #F8F8F8;
+}
+
+.pricingCard {
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.pricingCard h3 {
+  transition: all .3s;
+}
+
+.pricingCard:hover {
+  margin-top: -35px;
+  background-color: #FF4847;
+  color: #fff;
+}
+
+.pricingCard:hover h3 {
+  color: #fff;
+}
+
+.pricingCard:hover button {
+  background-color: #fff;
+  color: #FF4847;
+}
+#switchBtn {
+  display: flex;
+  height: 32px;
+  width: 66px;
+  background-color: #1D1E25;
+  align-items: center;
+  padding: 0 4px;
+  border-radius: 50px;
+}
+.sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  transition: all .5s;
+  background-color: #ff474779;
+  backdrop-filter: blur(10px);
+  z-index: 100 !important;
+  box-shadow: 0px 0px 2px 3px #00000063;
+}
+
+.sticky .stickyText {
+  color: white !important;
+}
+
+head {
+  transition: all .5s;
+}

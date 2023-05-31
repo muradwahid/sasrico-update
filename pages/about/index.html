@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- style -->
+  <link rel="stylesheet" href="style.css">
+  <!-- navbar style -->
+  <link rel="stylesheet" href="/assests/style/nav.css">
+  <link rel="stylesheet" href="../../assests/style/responsive.css">
+  <!-- tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- font-awesome -->
+  <script src="https://kit.fontawesome.com/14d27916cf.js" crossorigin="anonymous"></script>
+  <!-- flat icon -->
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+  <!-- swiperjs -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- navbar section start -->
+  <header class="py-6 transition-all duration-300 !z-50">
+    <nav class="container mx-auto flex justify-between items-center relative">
+      <div class="lg:block hidden">
+        <div class="flex items-center gap-9">
+          <!-- logo section -->
+          <div>
+            <a href="/">
+              <h6 class="italic">Sasrico<span class="text-[#FF4847] stickyText">.</span></h6>
+            </a>
+          </div>
+          <!-- route section -->
+          <div>
+            <ul class="flex items-center gap-6">
+              <li class="relative routeName"><a href="/" class="flex items-center gap-2 cursor-pointer parentHover "><span
+                    class="font-medium stickyText">Home</span> <i class="fa-solid fa-caret-down stickyText"></i></a>
+                <ul class="bg-white px-5 py-4 w-[120px] absolute transition-all duration-300 routeNameChild">
+                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"><a
+                      href="/">Home-1</a></li>
+                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium py-3 hover:text-[#FF4847]">
+                    <a href="/pages/home2/index.html">Home-2</a>
+                  </li>
+                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"><a
+                      href="/pages/home3/index.html">Home-3</a></li>
+                </ul>
+              </li>
+              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a href="/pages/about/index.html"
+                  class="font-medium stickyText">About</a>
+              </li>
+              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a class="font-medium stickyText"
+                  href="/pages/services/index.html">Services</a>
+              </li>
+  
+              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a href="/pages/fetures/index.html"
+                  class="font-medium stickyText">Fetures</a>
+              </li>
+              <li class="relative routeName"><a href="/" class="flex items-center gap-2 cursor-pointer parentHover "><span
+                    class="font-medium stickyText">Blog</span> <i class="fa-solid fa-caret-down stickyText"></i></a>
+                <ul class="bg-white px-5 py-4 w-[150px] absolute transition-all duration-300 routeNameChild">
+                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"><a
+                      class="" href="/pages/blog/index.html">Blog</a></li>
+                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium py-3 hover:text-[#FF4847]">
+                    <a href="/pages/blogdetails/index.html">Blog Details</a>
+                  </li>
+  
+                </ul>
+              </li>
+              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a href="/pages/contact/index.html"
+                  class="font-medium stickyText">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- responsive section start -->
+      <div class="lg:hidden block">
+        <div class="flex items-center gap-4">
+          <div class="toggle cursor-pointer bg-slate-200 h-8 w-8 flex items-center justify-center rounded-full">
+            <i class="fa-solid fa-bars hamburger"></i>
+            <i id="xMark" class="fa-solid fa-xmark hidden"></i>
+          </div>
+          <div>
+            <a href="/">
+              <h6 class="italic sm:block hidden">Sasrico<span class="text-[#FF4847]">.</span></h6>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- responsive section end -->
+      <!-- log in section -->
+      <div class="flex">
+        <button class="text-[14px] font-semibold tracking-[-0.05px] bg-white px-6 py-[6px] rounded-md">Log in</button>
+        <button class="text-[14px] font-semibold tracking-[-0.05px] bg-[#0E0605] text-white px-6 py-[6px] rounded-md">Get
+          stared</button>
+      </div>
+      <!-- sidebar section -->
+      <div
+        class="absolute top-10 z-50 lg:hidden bg-[#ff4747] w-48 pl-6 transition-all duration-500 sidebarNav py-5 h-[80vh]">
+        <a class="" href="/">
+          <h6 class="italic">Sasrico<span class="text-[#fff]">.</span></h6>
+        </a>
+        <ul class="text-white mt-3">
+          <li class="font-medium flex items-center gap-2 homePage"><a href="#">Home</a> <i
+              class="fa-solid fa-caret-down homeCaret"></i></li>
+          <div class="homeChild ml-3 mt-2">
+            <div class="grid gap-2">
+              <a class="font-medium hover:underline" href="/">Home-1</a>
+              <a class="font-medium hover:underline" href="./pages/home2/index.html">Home-2</a>
+              <a class="font-medium hover:underline" href="./pages/home3/index.html">Home-3</a>
+            </div>
+          </div>
+          <li class="font-medium flex hover:underline items-center gap-2 my-2"><a
+              href="./pages/about/index.html">About</a></li>
+          <li class="font-medium flex hover:underline items-center gap-2"><a
+              href="./pages/services/index.html">Services</a></li>
+          <li class="font-medium flex hover:underline items-center gap-2 my-2"><a href="../fetures/index.html">Fetures</a>
+          </li>
+          <li class="font-medium flex items-center gap-2 blogPage cursor-pointer"><a>Blog</a> <i
+              class="fa-solid fa-caret-down blogCaret"></i>
+          </li>
+          <div class="blogChild ml-3 mt-2 hidden">
+            <div class="grid gap-2">
+              <a class="font-medium hover:underline" href="./pages/blog/index.html">Blog</a>
+              <a class="font-medium hover:underline" href="./pages/blogdetails/index.html">Blog Details</a>
+            </div>
+          </div>
+          <li class="font-medium flex items-center hover:underline gap-2 mt-2"><a
+              href="./pages/contact/index.html">Contact</a></li>
+        </ul>
+      </div>
+  
+    </nav>
+  </header>
+  <!-- navbar section end -->
+
+  <main>
+    <!-- hero section start -->
+    <section>
+      <div class="container mx-auto flex gap-[130px] lg:flex-row flex-col mt-[80px] relative">
+        <div class="absolute bottom-0 -left-7">
+          <img src="https://i.ibb.co/nct69C8/Line.png" alt="">
+        </div>
+        <div>
+          <h1 class="leading-[76px] tracking-[-0.04em]">Improve your <br class="md:block hidden"> <span
+              class="text-primary">agility</span> with
+            <br class="md:block hidden"> Sasrico
+          </h1>
+          <p class="text-[#808D9E] text-[18px] font-medium mt-6">There is a time management facility through this <br
+              class="md:block hidden"> modern
+            software time management.</p>
+        </div>
+        <div>
+          <div class="relative">
+            <div class="absolute -top-10 -right-16">
+              <img src="https://i.ibb.co/N9rWBQJ/Element-20.png" alt="">
+            </div>
+            <div class="absolute top-12 -left-3">
+              <img src="https://i.ibb.co/Fzh7mQq/Element-19.png" alt="">
+            </div>
+            <img src="https://i.ibb.co/Drcz4GP/Img-3.png" alt="">
+            <div class="bg-white heroCard1 absolute bottom-8 md:-right-[70px] -right-6 rounded-[12px] p-[18px]">
+              <p class="text-[12.0011px] mb-[18.4px] font-bold leading-4 tracking-[-0.600055px]">Product views</p>
+              <div class="flex gap-[7.3px] items-end text-center">
+                <div>
+                  <div class="h-[18px] w-[20.4px] bg-primary rounded-[1.20011px]"></div>
+                  <p class="text-[8.40078px] text-[#808D9E] font-bold leading-3 tracking-[-0.300028px] mt-[7.2px]">Mo
+                  </p>
+                </div>
+                <div>
+                  <div class="h-[78.61px] w-[20.4px] bg-[#1D1E25] rounded-[1.20011px]"></div>
+                  <p class="text-[8.40078px] text-[#808D9E] font-bold leading-3 tracking-[-0.300028px] mt-[7.2px]">Tu
+                  </p>
+                </div>
+                <div>
+                  <div class="h-[48px] w-[20.4px] bg-primary rounded-[1.20011px]"></div>
+                  <p class="text-[8.40078px] text-[#808D9E] font-bold leading-3 tracking-[-0.300028px] mt-[7.2px]">We
+                  </p>
+                </div>
+                <div>
+                  <div class="h-[11.4px] w-[20.4px] bg-[#1D1E25] rounded-[1.20011px]"></div>
+                  <p class="text-[8.40078px] text-[#808D9E] font-bold leading-3 tracking-[-0.300028px] mt-[7.2px]">Th
+                  </p>
+                </div>
+                <div>
+                  <div class="h-[26.4px] w-[20.4px] bg-primary rounded-[1.20011px]"></div>
+                  <p class="text-[8.40078px] text-[#808D9E] font-bold leading-3 tracking-[-0.300028px] mt-[7.2px]">Fr
+                  </p>
+                </div>
+                <div>
+                  <div class="h-[42px] w-[20.4px] bg-[#1D1E25] rounded-[1.20011px]"></div>
+                  <p class="text-[8.40078px] text-[#808D9E] font-bold leading-3 tracking-[-0.300028px] mt-[7.2px]">Sa
+                  </p>
+                </div>
+                <div>
+                  <div class="h-[31px] w-[20.4px] bg-primary rounded-[1.20011px]"></div>
+                  <p class="text-[8.40078px] text-[#808D9E] font-bold leading-3 tracking-[-0.300028px] mt-[7.2px]">Su
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute bottom-[140px] md:-right-32 -right-12 bg-white flex items-center gap-[2px] px-[21px] py-[31px] rounded-[10.7666px] heroCard2">
+              <div>
+                <p class="text-[#224272] text-[9.42082px] opacity-40">Reader Rates</p>
+                <p class="text-[16.15px] text-[#5049AA] font-bold my-[13px]">3,729</p>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-arrow-up text-[#4AAF05] text-[8.07499px]"></i>
+                  <p class="text-[#4AAF05] text-[8.07499px] leading-[11px] tracking-[0.269166px]">7,00%</p>
+                </div>
+              </div>
+              <div>
+                <img src="https://i.ibb.co/jzP7Y6y/Vector-1.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hero section end -->
+
+    <!-- partners section start -->
+    <section class="container mx-auto mt-[100px] mb-[130px]">
+      <div class="  py-7 ">
+        <div class="swiper-container overflow-hidden">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide ">
+              <div>
+                <img src="https://i.ibb.co/pyw0rYP/Logo-5.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide ">
+              <div>
+                <img src="https://i.ibb.co/ssstTVj/Logo.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide ">
+              <div>
+                <img src="https://i.ibb.co/XJ1g0sj/Logo-1.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide ">
+              <div>
+                <img src="https://i.ibb.co/zxLKD6y/Logo-2.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide ">
+              <div>
+                <img src="https://i.ibb.co/5vYZsfm/Logo-3.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide ">
+              <div>
+                <img src="https://i.ibb.co/XJ1g0sj/Logo-1.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide ">
+              <div>
+                <img src="https://i.ibb.co/pyw0rYP/Logo-5.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide ">
+              <div>
+                <img src="https://i.ibb.co/zxLKD6y/Logo-2.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide ">
+              <div>
+                <img src="https://i.ibb.co/5vYZsfm/Logo-3.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide ">
+              <div>
+                <img src="https://i.ibb.co/XJ1g0sj/Logo-1.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide ">
+              <div>
+                <img src="https://i.ibb.co/5vYZsfm/Logo-3.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <!-- trusted compay carousel end -->
+          <div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- partners section end -->
+
+    <!-- fetures section start -->
+    <section class="relative">
+      <div class="absolute right-0">
+        <img src="https://i.ibb.co/5RdRCSn/Line.png" alt="">
+      </div>
+      <div class="container mx-auto mt-32 relative">
+        <div class="absolute -left-8 sm:block hidden">
+          <img src="https://i.ibb.co/02KmH4L/Element-2.png" alt="">
+        </div>
+        <div class="md:w-[610px] mx-auto">
+          <p class="text-[14px] text-primary text-center mb-3 font-bold leading-5 tracking-[-0.05px]">Features</p>
+          <h1 class="!text-[60px] leading-[64px] tracking-[0.0.3em] text-center"><span class="text-primary">Paying
+              off</span> and
+            adjust your strategy.</h1>
+        </div>
+        <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 mt-16 mb-24">
+          <div class="bg-white px-6 py-9 rounded-2xl feturesCard">
+            <i class="fi fi-rs-settings text-[24px] text-primary"></i>
+            <p class="text-[24px] font-bold mb-4 leading-[30px] mt-8 tracking-[-1px]">Analyze your data</p>
+            <p class="text-[#808D9E] font-medium leading-6">Resource management is the process of pre-planning,</p>
+          </div>
+          <div class="bg-white px-6 py-9 rounded-2xl feturesCard md:mt-16">
+            <i class="fa-solid fa-chart-line text-[24px] text-primary"></i>
+            <p class="text-[24px] font-bold mb-4 leading-[30px] mt-8 tracking-[-1px]">Embedded analytics</p>
+            <p class="text-[#808D9E] font-medium leading-6">Resource management is the process of pre-planning,</p>
+          </div>
+          <div class="bg-white px-6 py-9 rounded-2xl feturesCard">
+            <i class="fi fi-rr-users text-[24px] text-primary"></i>
+            <p class="text-[24px] font-bold mb-4 leading-[30px] mt-8 tracking-[-1px]">Collaborate securely</p>
+            <p class="text-[#808D9E] font-medium leading-6">Resource management is the process of pre-planning,</p>
+          </div>
+          <div class="bg-white px-6 py-9 rounded-2xl feturesCard md:mt-16">
+            <div>
+              <img src="/assests/images/icon/file.png" alt="">
+            </div>
+            <p class="text-[24px] font-bold mb-4 leading-[30px] mt-8 tracking-[-1px]">Unified reporting</p>
+            <p class="text-[#808D9E] font-medium leading-6">Resource management is the process of pre-planning,</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- fetures section end -->
+
+    <!-- achievement section start -->
+    <section class="mt-[150px]">
+      <div class="secondary-container mx-auto bg-primary px-[50px] py-[100px] rounded-[32px] relative">
+        <div class="absolute -top-11 left-24">
+          <img src="https://i.ibb.co/PZkd5ng/Element.png" alt="">
+        </div>
+        <div class="flex gap-[30px] lg:flex-row flex-col">
+          <div>
+            <div>
+              <img class="sm:h-[380px]" src="https://i.ibb.co/F8tgzKh/Img.png" alt="">
+            </div>
+            <div class="mt-[80px]">
+              <p class="text-white leading-5 font-bold tracking-[-0.5px]">Our achievement</p>
+              <h1 class="!text-[60px] leading-[64px] text-white tracking-[-0.03em] mt-4">We generated 2x <br
+                  class="sm:block hidden"> high speed
+                of <br class="sm:block hidden">
+                company</h1>
+            </div>
+          </div>
+          <div class="lg:w-[470px]">
+            <div class="bg-[#1D1E25] rounded-[24px] px-[40px] py-[52px]">
+              <p class="text-[30px] text-white font-bold leading-[36px] tracking-[-0.02em]">Our statement</p>
+              <h6 class="leading-[26px] tracking-[-0.5px] font-bold mt-[30px] text-white mb-[21px]">“ Nulla ultrices,
+                dui id
+                sollicitudin pretium,lacus mi maximus velit et vulputate justo elit purus. In iaculis vitae
+                enim id dictum.”</h6>
+              <div class="border-t-2 border-[#5e5e5e] pt-6">
+                <div class="flex items-center gap-5 sm:flex-row flex-col">
+                  <div class="h-[60px] w-[60px] bg-[#FFBC99] flex items-center justify-center">
+                    <img src="https://i.ibb.co/L9Nzvgr/ri-double-quotes-l.png" alt="">
+                  </div>
+                  <div>
+                    <h6 class="text-white leading-[26px] tracking-[-0.5px]">Jonah Jameson</h6>
+                    <p class="font-medium leading-[26px] tracking-[-0.5px] opacity-60 text-white mt-[2px]">CEO of
+                      Youngtech</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-[470px] grid grid-cols-2 gap-[48px] mt-[80px]">
+              <div>
+                <h2 class="leading-[52px] tracking-[-0.02em] text-white">98%</h2>
+                <p class="text-[18px] font-medium leading-7 text-white mt-4">Client satisfaction</p>
+              </div>
+              <div>
+                <h2 class="leading-[52px] tracking-[-0.02em] text-white">30%</h2>
+                <p class="text-[18px] font-medium leading-7 text-white mt-4">Decrease expenses</p>
+              </div>
+              <div>
+                <h2 class="leading-[52px] tracking-[-0.02em] text-white">7.6M</h2>
+                <p class="text-[18px] font-medium leading-7 text-white mt-4">Money flow users</p>
+              </div>
+              <div>
+                <h2 class="leading-[52px] tracking-[-0.02em] text-white">150+</h2>
+                <p class="text-[18px] font-medium leading-7 text-white mt-4">New features</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- achievement section end -->
+
+    <!-- Collaborate section start -->
+    <section class="mt-32 relative">
+      <div class="absolute right-[9%] bottom-0">
+        <img src="https://i.ibb.co/wNKSrKS/Element-1.png" alt="">
+      </div>
+      <div class="container mx-auto flex lg:gap-[100px] lg:flex-row flex-col">
+        <div class="lg:w-1/2">
+          <img class="w-full h-full" src="https://i.ibb.co/mcKy8Nb/Img-1.png" alt="">
+        </div>
+        <div class="lg:w-1/2">
+          <p class="text-[18px] text-primary font-medium leading-7 uppercase tracking-[-1px]">Collaborate</p>
+          <h1 class="!text-[60px] mt-4 leading-[64px] tracking-[-0.03em]">Collaborate with your <span
+              class="text-primary">team</span> easily</h1>
+          <p class="text-[#808D9E] text-[18px] font-medium leading-7 mt-[30px]">Donec bibendum, dui id ultrices
+            molestie, neque neque porta felis, id viverra ligula justo interdum mi.</p>
+          <ul class="grid md:grid-cols-2 grid-cols-1 gap-y-3 mt-8">
+            <li class="text-[18px] font-medium leading-7 text-[ #1D1E25] flex items-center gap-3"><i
+                class="fa-solid fa-circle-check"></i>
+              <p>Organize your data</p>
+            </li>
+            <li class="text-[18px] font-medium leading-7 text-[ #1D1E25] flex items-center gap-3"><i
+                class="fa-solid fa-circle-check"></i>
+              <p>Always in sync</p>
+            </li>
+            <li class="text-[18px] font-medium leading-7 text-[ #1D1E25] flex items-center gap-3"><i
+                class="fa-solid fa-circle-check"></i>
+              <p>Work with any team</p>
+            </li>
+            <li class="text-[18px] font-medium leading-7 text-[ #1D1E25] flex items-center gap-3"><i
+                class="fa-solid fa-circle-check"></i>
+              <p>Embedded analytics</p>
+            </li>
+            <li class="text-[18px] font-medium leading-7 text-[ #1D1E25] flex items-center gap-3"><i
+                class="fa-solid fa-circle-check"></i>
+              <p>Business analytics</p>
+            </li>
+          </ul>
+          <div>
+            <button
+              class="mt-11 leading-5 font-bold tracking-[-0.5px] border border-[#808D9E] px-6 py-[10px] rounded-[8px] transition-all duration-300 cursor-pointer hover:text-white hover:bg-[#FF4847] hover:border-[#FF4847]">Get
+              started now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Collaborate section end -->
+
+    <!-- our team section start -->
+    <section class="mt-[140px]">
+      <div class="relative lg:w-[750px] mx-auto">
+        <div class="absolute -left-16 -mt-2">
+          <img src="https://i.ibb.co/Jxjrgbg/Element-2.png" alt="">
+        </div>
+        <p class="font-bold leading-5 text-primary tracking-[-1px] uppercase text-center">our team</p>
+        <h1 class="!text-[60px] leading-[64px] mt-4 tracking-[-0.03em] text-center">Meet our talented team <br
+            class="sm:block hidden"> <span class="text-primary">members</span></h1>
+      </div>
+      <div class="container mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px] mt-[64px]">
+        <div>
+          <div>
+            <img src="https://i.ibb.co/BV03YJs/Img-2.png" alt="">
+          </div>
+          <div class="mt-9 px-6">
+            <h5 class="!text-[30px] font-bold leading-9 tracking-[-0.02em]">Cameron Williamson</h5>
+            <p class="text-[#808D9E] text-[14px] font-bold leading-5 tracking-[-0.5px]">Founder</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <img src="https://i.ibb.co/7QR0vSH/Img-4.png" alt="">
+          </div>
+          <div class="mt-9 px-6">
+            <h5 class="!text-[30px] font-bold leading-9 tracking-[-0.02em]">Cameron Williamson</h5>
+            <p class="text-[#808D9E] text-[14px] font-bold leading-5 tracking-[-0.5px]">Founder</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <img src="https://i.ibb.co/SKH6vr7/Img-5.png" alt="">
+          </div>
+          <div class="mt-9 px-6">
+            <h5 class="!text-[30px] font-bold leading-9 tracking-[-0.02em]">Cameron Williamson</h5>
+            <p class="text-[#808D9E] text-[14px] font-bold leading-5 tracking-[-0.5px]">Founder</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center mt-[64px]">
+        <button class="font-bold leading-5 text-white tracking-[-0.5px] bg-primary px-6 py-3 rounded-[8px]">View all
+          members</button>
+      </div>
+    </section>
+    <!-- our team section end -->
+
+    <!-- latest updates section start -->
+    <section class="relative mb-[150px]">
+      <div class="absolute -bottom-24">
+        <img src="https://i.ibb.co/z8hkk6J/Frame-1000004858.png" alt="">
+      </div>
+      <div class="container mx-auto mb-32 mt-[140px]">
+
+        <p class="text-[14px] font-bold leading-5 tracking-[-0.5px] text-primary mb-4">Dashboard</p>
+        <div class="flex items-center justify-between gap-4 flex-wrap">
+          <h1 class="leading-[64px] tracking-[-0.03em]">Our latest updates</h1>
+          <div>
+            <button class="text-white font-bold leading-5 tracking-[-0.05px] bg-[#1D1E25] px-6 py-3 rounded-md">View
+              all</button>
+          </div>
+        </div>
+        <div class="grid mt-14 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px]">
+          <div>
+            <div>
+              <img class="w-full" src="https://i.ibb.co/NrKYHwq/Img.png" alt="">
+            </div>
+            <div class="mt-8 border-b pb-5">
+              <div class="flex gap-3">
+                <p
+                  class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                  cloud</p>
+                <p
+                  class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                  app development</p>
+              </div>
+              <h5 class="leading-[30px] tracking-[-1px] mt-4">15+ Most Effective and Proven Time Management Techniques
+              </h5>
+            </div>
+            <p class="font-medium leading-[26px] tracking-[-0.5px] mt-4">October 27, 2021 | 4 min read</p>
+          </div>
+          <div>
+            <div>
+              <img class="w-full" src="https://i.ibb.co/gSvCs8h/Img-1.png" alt="">
+            </div>
+            <div class="mt-8 border-b pb-5">
+              <div class="flex gap-3">
+                <p
+                  class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                  server</p>
+              </div>
+              <h5 class="leading-[30px] tracking-[-1px] mt-4">15+ Most Effective and Proven Time Management Techniques
+              </h5>
+            </div>
+            <p class="font-medium leading-[26px] tracking-[-0.5px] mt-4">October 27, 2021 | 4 min read</p>
+          </div>
+          <div>
+            <div>
+              <img class="w-full" src="https://i.ibb.co/JkY4krn/Img-2.png" alt="">
+            </div>
+            <div class="mt-8 border-b pb-5">
+              <div class="flex gap-3">
+                <p
+                  class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                  business</p>
+              </div>
+              <h5 class="leading-[30px] tracking-[-1px] mt-4">15+ Most Effective and Proven Time Management Techniques
+              </h5>
+            </div>
+            <p class="font-medium leading-[26px] tracking-[-0.5px] mt-4">October 27, 2021 | 4 min read</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- latest updates section end -->
+
+    <!-- footer section start -->
+    <footer class="bg-[#1D1E25] pt-[100px] pb-[80px] relative">
+      <div class="absolute right-20 -top-5">
+        <img src="https://i.ibb.co/vv1Pr9c/Element-5.png" alt="">
+      </div>
+      <div class="absolute left-8 top-14">
+        <img src="https://i.ibb.co/mb8r7Mq/Element.png" alt="">
+      </div>
+      <div class="absolute bottom-10">
+        <img src="https://i.ibb.co/gSRDXT3/Element-1.png" alt="">
+      </div>
+      <section class="container mx-auto">
+        <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4">
+          <div>
+            <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Product</p>
+            <ul>
+              <li class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50 ">Email Row</li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Free
+                Tools</li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Agents
+              </li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Blog
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Resources</p>
+            <ul>
+              <li class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50 ">Our Agents</li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Member
+                Stories</li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Video
+              </li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Free
+                trial</li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Company</p>
+            <ul>
+              <li class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50 ">Patnerships</li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Terms of
+                use</li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Privacy
+              </li>
+              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50">Sitemap
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Get in touch</p>
+            <p class="font-medium leading-5 text-white opacity-50">You’ll find your next Marketing valu you prefer.</p>
+            <div class="flex items-center gap-3 mt-[62px]">
+              <div class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white">
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <div class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between flex-wrap mt-[80px]">
+          <div>
+            <p class="text-[30px] font-bold italic text-white">Sasrico<span class="text-primary">.</span></p>
+          </div>
+          <div>
+            <p class="font-medium text-white opacity-50">Copyright 2020.com, All rights reserved.</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- footer section end -->
+  </main>
+
+
+  <!-- navbar script -->
+  <script src="/assests/script/nav.js"></script>
+  <!-- slider script -->
+  <script>
+    var swiper = new Swiper(".swiper-container", {
+      // Optional parameters
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
+      direction: "horizontal",
+      loop: true,
+      slidesPerView: 2,
+      spaceBetween: 10,
+      // Responsive breakpoints
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+        // when window width is >= 640px
+        740: {
+          slidesPerView: 4,
+          spaceBetween: 40
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 40
+        }
+      },
+
+    });
+  </script>
+</body>
+
+</html>

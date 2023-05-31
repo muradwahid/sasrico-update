@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- tailwindcss -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- style -->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/assests/style/nav.css">
+  <link rel="stylesheet" href="../../assests/style/responsive.css">
+  <!-- font-awesome -->
+  <script src="https://kit.fontawesome.com/14d27916cf.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- navbar section start -->
+  <header class="py-6 transition-all duration-300 !z-50">
+    <nav class="container mx-auto flex justify-between items-center relative">
+      <div class="lg:block hidden">
+        <div class="flex items-center gap-9">
+          <!-- logo section -->
+          <div>
+            <a href="/">
+              <h6 class="italic">Sasrico<span class="text-[#FF4847] stickyText">.</span></h6>
+            </a>
+          </div>
+          <!-- route section -->
+          <div>
+            <ul class="flex items-center gap-6">
+              <li class="relative routeName z-50"><a href="/" class="flex items-center gap-2 cursor-pointer parentHover "><span
+                    class="font-medium stickyText">Home</span> <i class="fa-solid fa-caret-down stickyText"></i></a>
+                <ul class="bg-white px-5 py-4 w-[120px] absolute transition-all duration-300 routeNameChild">
+                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"><a
+                      href="/">Home-1</a></li>
+                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium py-3 hover:text-[#FF4847]">
+                    <a href="/pages/home2/index.html">Home-2</a>
+                  </li>
+                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"><a
+                      href="/pages/home3/index.html">Home-3</a></li>
+                </ul>
+              </li>
+              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a href="/pages/about/index.html"
+                  class="font-medium stickyText">About</a>
+              </li>
+              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a class="font-medium stickyText"
+                  href="/pages/services/index.html">Services</a>
+              </li>
+  
+              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a href="/pages/fetures/index.html"
+                  class="font-medium stickyText">Fetures</a>
+              </li>
+              <li class="relative routeName z-50"><a href="/" class="flex items-center gap-2 cursor-pointer parentHover "><span
+                    class="font-medium stickyText">Blog</span> <i class="fa-solid fa-caret-down stickyText"></i></a>
+                <ul class="bg-white px-5 py-4 w-[150px] absolute transition-all duration-300 routeNameChild">
+                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"><a
+                      class="text-primary" href="/pages/blog/index.html">Blog</a></li>
+                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium py-3 hover:text-[#FF4847]">
+                    <a href="/pages/blogdetails/index.html">Blog Details</a>
+                  </li>
+  
+                </ul>
+              </li>
+              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a href="/pages/contact/index.html"
+                  class="font-medium stickyText">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- responsive section start -->
+      <div class="lg:hidden block">
+        <div class="flex items-center gap-4">
+          <div class="toggle cursor-pointer bg-slate-200 h-8 w-8 flex items-center justify-center rounded-full">
+            <i class="fa-solid fa-bars hamburger"></i>
+            <i id="xMark" class="fa-solid fa-xmark hidden"></i>
+          </div>
+          <div>
+            <a href="/">
+              <h6 class="italic sm:block hidden">Sasrico<span class="text-[#FF4847]">.</span></h6>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- responsive section end -->
+      <!-- log in section -->
+      <div class="flex">
+        <button class="text-[14px] font-semibold tracking-[-0.05px] bg-white px-6 py-[6px] rounded-md">Log in</button>
+        <button class="text-[14px] font-semibold tracking-[-0.05px] bg-[#0E0605] text-white px-6 py-[6px] rounded-md">Get
+          stared</button>
+      </div>
+      <!-- sidebar section -->
+      <div
+        class="absolute top-10 z-50 lg:hidden bg-[#ff4747] w-48 pl-6 transition-all duration-500 sidebarNav py-5 h-[80vh]">
+        <a class="" href="/">
+          <h6 class="italic">Sasrico<span class="text-[#fff]">.</span></h6>
+        </a>
+        <ul class="text-white mt-3">
+          <li class="font-medium flex items-center gap-2 homePage"><a href="#">Home</a> <i
+              class="fa-solid fa-caret-down homeCaret"></i></li>
+          <div class="homeChild ml-3 mt-2">
+            <div class="grid gap-2">
+              <a class="font-medium hover:underline" href="/">Home-1</a>
+              <a class="font-medium hover:underline" href="./pages/home2/index.html">Home-2</a>
+              <a class="font-medium hover:underline" href="./pages/home3/index.html">Home-3</a>
+            </div>
+          </div>
+          <li class="font-medium flex hover:underline items-center gap-2 my-2"><a
+              href="./pages/about/index.html">About</a></li>
+          <li class="font-medium flex hover:underline items-center gap-2"><a
+              href="./pages/services/index.html">Services</a></li>
+          <li class="font-medium flex hover:underline items-center gap-2 my-2"><a href="../fetures/index.html">Fetures</a>
+          </li>
+          <li class="font-medium flex items-center gap-2 blogPage cursor-pointer"><a>Blog</a> <i
+              class="fa-solid fa-caret-down blogCaret"></i>
+          </li>
+          <div class="blogChild ml-3 mt-2 hidden">
+            <div class="grid gap-2">
+              <a class="font-medium hover:underline" href="./pages/blog/index.html">Blog</a>
+              <a class="font-medium hover:underline" href="./pages/blogdetails/index.html">Blog Details</a>
+            </div>
+          </div>
+          <li class="font-medium flex items-center hover:underline gap-2 mt-2"><a
+              href="./pages/contact/index.html">Contact</a></li>
+        </ul>
+      </div>
+  
+    </nav>
+  </header>
+  <!-- navbar section end -->
+
+  <!-- latest updates section start -->
+  <section class="mb-[150px] mt-[80px] relative">
+    <div class="absolute right-0 -bottom-40">
+      <img src="https://i.ibb.co/ZMTZbrG/Vector-620.png" alt="">
+    </div>
+    <div class="container mx-auto relative">
+      <div class="absolute right-0">
+        <img src="https://i.ibb.co/pJHhR3d/Element-3.png" alt="">
+      </div>
+      <p class="text-[14px] font-bold leading-5 tracking-[-0.5px] text-primary mb-4">LATEST NEWS</p>
+      <div class="">
+        <h1 class="leading-[64px] tracking-[-0.03em] !text-[60px]">Our latest updates</h1>
+      </div>
+      <div class="grid mt-14 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-[30px] gap-y-16">
+        <div>
+          <div>
+            <img class="w-full" src="https://i.ibb.co/NrKYHwq/Img.png" alt="">
+          </div>
+          <div class="mt-8 border-b pb-5">
+            <div class="flex gap-3">
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                cloud</p>
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                app development</p>
+            </div>
+            <h5 class="leading-[30px] tracking-[-1px] mt-4">15+ Most Effective and Proven Time Management Techniques
+            </h5>
+          </div>
+          <p class="font-medium leading-[26px] tracking-[-0.5px] mt-4">October 27, 2021 | 4 min read</p>
+        </div>
+        <div>
+          <div>
+            <img class="w-full" src="https://i.ibb.co/gSvCs8h/Img-1.png" alt="">
+          </div>
+          <div class="mt-8 border-b pb-5">
+            <div class="flex gap-3">
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                server</p>
+            </div>
+            <h5 class="leading-[30px] tracking-[-1px] mt-4">15+ Most Effective and Proven Time Management Techniques
+            </h5>
+          </div>
+          <p class="font-medium leading-[26px] tracking-[-0.5px] mt-4">October 27, 2021 | 4 min read</p>
+        </div>
+        <div>
+          <div>
+            <img class="w-full" src="https://i.ibb.co/JkY4krn/Img-2.png" alt="">
+          </div>
+          <div class="mt-8 border-b pb-5">
+            <div class="flex gap-3">
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                business</p>
+            </div>
+            <h5 class="leading-[30px] tracking-[-1px] mt-4">15+ Most Effective and Proven Time Management Techniques
+            </h5>
+          </div>
+          <p class="font-medium leading-[26px] tracking-[-0.5px] mt-4">October 27, 2021 | 4 min read</p>
+        </div>
+        <div>
+          <div>
+            <img class="w-full" src="https://i.ibb.co/CztyZxL/Img-6.png" alt="">
+          </div>
+          <div class="mt-8 border-b pb-5">
+            <div class="flex gap-3">
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                cloud</p>
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                app development</p>
+            </div>
+            <h5 class="leading-[30px] tracking-[-1px] mt-4">15+ Most Effective and Proven Time Management Techniques
+            </h5>
+          </div>
+          <p class="font-medium leading-[26px] tracking-[-0.5px] mt-4">October 27, 2021 | 4 min read</p>
+        </div>
+        <div>
+          <div>
+            <img class="w-full" src="https://i.ibb.co/yNVtLYn/Img-7.png" alt="">
+          </div>
+          <div class="mt-8 border-b pb-5">
+            <div class="flex gap-3">
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                server</p>
+            </div>
+            <h5 class="leading-[30px] tracking-[-1px] mt-4">15+ Most Effective and Proven Time Management Techniques
+            </h5>
+          </div>
+          <p class="font-medium leading-[26px] tracking-[-0.5px] mt-4">October 27, 2021 | 4 min read</p>
+        </div>
+        <div>
+          <div>
+            <img class="w-full" src="https://i.ibb.co/ypd9L8t/Img-8.png" alt="">
+          </div>
+          <div class="mt-8 border-b pb-5">
+            <div class="flex gap-3">
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                business</p>
+            </div>
+            <h5 class="leading-[30px] tracking-[-1px] mt-4">15+ Most Effective and Proven Time Management Techniques
+            </h5>
+          </div>
+          <p class="font-medium leading-[26px] tracking-[-0.5px] mt-4">October 27, 2021 | 4 min read</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- latest updates section end -->
+
+  <!-- latest news section start -->
+  <section class="mb-32">
+    <div class="container mx-auto">
+      <div>
+        <p class="text-[14px] font-bold leading-5 tracking-[-0.5px] text-primary mb-4">LATEST NEWS</p>
+        <h1 class="leading-[64px] tracking-[-0.03em] !text-[60px]">New post</h1>
+      </div>
+      <div class="grid lg:grid-cols-2 grid-cols-1 gap-x-[30px] gap-y-[56px] mt-[64px]">
+        <div class="flex md:flex-row flex-col gap-[30px]">
+          <div class="">
+            <img class="md:!min-w-[170px] md:h-[140px] w-full" src="https://i.ibb.co/syLdXf4/Img-9.png" alt="">
+          </div>
+          <div class="">
+            <div class="flex gap-3">
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                cloud</p>
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                app development</p>
+            </div>
+            <h5 class="leading-[30px] tracking-[-1px] mt-1 border-b pb-3">15+ Most Effective and Proven Time Management
+              Techniques
+            </h5>
+            <p class="font-medium leading-[26px] tracking-[-0.5px] mt-2">October 27, 2021 | 4 min read</p>
+          </div>
+        </div>
+        <div class="flex md:flex-row flex-col gap-[30px]">
+          <div class="">
+            <img class="md:!min-w-[170px] md:h-[140px] w-full" src="https://i.ibb.co/8BgvpxM/Img-10.png" alt="">
+          </div>
+          <div class="">
+            <div class="flex gap-3">
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                cloud</p>
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                app development</p>
+            </div>
+            <h5 class="leading-[30px] tracking-[-1px] mt-1 border-b pb-3">15+ Most Effective and Proven Time Management
+              Techniques
+            </h5>
+            <p class="font-medium leading-[26px] tracking-[-0.5px] mt-2">October 27, 2021 | 4 min read</p>
+          </div>
+        </div>
+        <div class="flex md:flex-row flex-col gap-[30px]">
+          <div class="">
+            <img class="md:!min-w-[170px] md:h-[140px] w-full" src="https://i.ibb.co/cXcV6TS/Img-11.png" alt="">
+          </div>
+          <div class="">
+            <div class="flex gap-3">
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                cloud</p>
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                app development</p>
+            </div>
+            <h5 class="leading-[30px] tracking-[-1px] mt-1 border-b pb-3">15+ Most Effective and Proven Time Management
+              Techniques
+            </h5>
+            <p class="font-medium leading-[26px] tracking-[-0.5px] mt-2">October 27, 2021 | 4 min read</p>
+          </div>
+        </div>
+        <div class="flex md:flex-row flex-col gap-[30px]">
+          <div class="">
+            <img class="md:!min-w-[170px] md:h-[140px] w-full" src="https://i.ibb.co/DpYTMx5/Img-12.png" alt="">
+          </div>
+          <div class="">
+            <div class="flex gap-3">
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                cloud</p>
+              <p
+                class="uppercase text-primary text-[14px] leading-[14px] font-medium bg-white px-3 py-1 rounded-[4px] updatesShadow">
+                app development</p>
+            </div>
+            <h5 class="leading-[30px] tracking-[-1px] mt-1 border-b pb-3">15+ Most Effective and Proven Time Management
+              Techniques
+            </h5>
+            <p class="font-medium leading-[26px] tracking-[-0.5px] mt-2">October 27, 2021 | 4 min read</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- latest news section end -->
+
+  <!-- footer section start -->
+  <footer class="bg-[#1D1E25] pt-[100px] pb-[80px] relative">
+    <div class="absolute right-20 -top-5">
+      <img src="https://i.ibb.co/vv1Pr9c/Element-5.png" alt="">
+    </div>
+    <div class="absolute left-8 top-14">
+      <img src="https://i.ibb.co/mb8r7Mq/Element.png" alt="">
+    </div>
+    <div class="absolute bottom-10">
+      <img src="https://i.ibb.co/gSRDXT3/Element-1.png" alt="">
+    </div>
+    <section class="container mx-auto">
+      <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4">
+        <div>
+          <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Product</p>
+          <ul>
+            <li class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50 ">Email Row</li>
+            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Free
+              Tools</li>
+            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Agents
+            </li>
+            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Blog
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Resources</p>
+          <ul>
+            <li class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50 ">Our Agents</li>
+            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Member
+              Stories</li>
+            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Video
+            </li>
+            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Free
+              trial</li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Company</p>
+          <ul>
+            <li class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50 ">Patnerships</li>
+            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Terms of
+              use</li>
+            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Privacy
+            </li>
+            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50">Sitemap
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Get in touch</p>
+          <p class="font-medium leading-5 text-white opacity-50">You’ll find your next Marketing valu you prefer.</p>
+          <div class="flex items-center gap-3 mt-[62px]">
+            <div class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white">
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white">
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-between flex-wrap mt-[80px]">
+        <div>
+          <p class="text-[30px] font-bold italic text-white">Sasrico<span class="text-primary">.</span></p>
+        </div>
+        <div>
+          <p class="font-medium text-white opacity-50">Copyright 2020.com, All rights reserved.</p>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <!-- footer section end -->
+  <!-- navbar script -->
+  <script src="/assests/script/nav.js"></script>
+</body>
+
+</html>
