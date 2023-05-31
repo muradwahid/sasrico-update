@@ -114,7 +114,7 @@ background-color: #ff474779;
 
 } */
 /* media queries */
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 796px) {
   .collaborateCardRes {
     flex-direction: column;
     transform: rotate(0deg);
