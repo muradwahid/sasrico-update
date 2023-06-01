@@ -15,6 +15,7 @@
 .sidebarNav{
   left: -1000px;
   border-radius: 0px 15px 15px 0px;
+  /* border: 1px solid gray; */
 }
 .homeChild{
   display: none;
