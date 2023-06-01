@@ -9,7 +9,7 @@ toggle.addEventListener('click', () => {
   if (xMark.className === 'fa-solid fa-xmark hidden') {
     xMark.classList.remove('hidden');
     hamburger.classList.add('hidden')
-    sidebarNav.style.left='-13%'
+    sidebarNav.style.left='0px'
   }
   else {
   xMark.classList.add('hidden');
