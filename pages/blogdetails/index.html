@@ -1,293 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- styls -->
+    <link rel="stylesheet" href="/pages/blogdetails/style.css" />
+    <link rel="stylesheet" href="/assests/style/nav.css" />
+    <link rel="stylesheet" href="../../assests/style/responsive.css" />
+    <!-- font-awesome -->
+    <script
+      src="https://kit.fontawesome.com/14d27916cf.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Blog Details</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- tailwindcss -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- styls -->
-  <link rel="stylesheet" href="/pages/blogdetails/style.css">
-  <link rel="stylesheet" href="/assests/style/nav.css">
-  <link rel="stylesheet" href="../../assests/style/responsive.css">
-  <!-- font-awesome -->
-  <script src="https://kit.fontawesome.com/14d27916cf.js" crossorigin="anonymous"></script>
-  <title>Blog Details</title>
-</head>
+  <body>
+    <!-- navbar section start -->
+    <header class="py-6 transition-all duration-300 !z-50">
+      <nav class="container mx-auto flex justify-between items-center relative">
+        <div class="lg:block hidden">
+          <div class="flex items-center gap-9">
+            <!-- logo section -->
+            <div>
+              <a href="/">
+                <h6 class="italic">
+                  Sasrico<span class="text-[#FF4847] stickyText">.</span>
+                </h6>
+              </a>
+            </div>
+            <!-- route section -->
+            <div>
+              <ul class="flex items-center gap-6">
+                <li class="relative routeName">
+                  <a
+                    href="/"
+                    class="flex items-center gap-2 cursor-pointer parentHover"
+                    ><span class="font-medium stickyText">Home</span>
+                    <i class="fa-solid fa-caret-down stickyText"></i
+                  ></a>
+                  <ul
+                    class="bg-white px-5 py-4 w-[120px] absolute transition-all duration-300 routeNameChild"
+                  >
+                    <li
+                      class="sub-menu-effect transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"
+                    >
+                      <a href="/">Home-1</a>
+                    </li>
+                    <li
+                      class="sub-menu-effect transition-all duration-300 cursor-pointer font-medium py-3 hover:text-[#FF4847]"
+                    >
+                      <a href="/pages/home2/index.html">Home-2</a>
+                    </li>
+                    <li
+                      class="sub-menu-effect transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"
+                    >
+                      <a href="/pages/home3/index.html">Home-3</a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"
+                >
+                  <a
+                    href="/pages/about/index.html"
+                    class="font-medium stickyText"
+                    >About</a
+                  >
+                </li>
+                <li
+                  class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"
+                >
+                  <a
+                    class="font-medium stickyText"
+                    href="/pages/services/index.html"
+                    >Services</a
+                  >
+                </li>
 
-<body>
-  <!-- navbar section start -->
-  <header class="py-6 transition-all duration-300 !z-50">
-    <nav class="container mx-auto flex justify-between items-center relative">
-      <div class="lg:block hidden">
-        <div class="flex items-center gap-9">
-          <!-- logo section -->
-          <div>
-            <a href="/">
-              <h6 class="italic">Sasrico<span class="text-[#FF4847] stickyText">.</span></h6>
-            </a>
-          </div>
-          <!-- route section -->
-          <div>
-            <ul class="flex items-center gap-6">
-              <li class="relative routeName"><a href="/" class="flex items-center gap-2 cursor-pointer parentHover "><span
-                    class="font-medium stickyText">Home</span> <i class="fa-solid fa-caret-down stickyText"></i></a>
-                <ul class="bg-white px-5 py-4 w-[120px] absolute transition-all duration-300 routeNameChild">
-                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"><a
-                      href="/">Home-1</a></li>
-                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium py-3 hover:text-[#FF4847]">
-                    <a href="/pages/home2/index.html">Home-2</a>
-                  </li>
-                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"><a
-                      href="/pages/home3/index.html">Home-3</a></li>
-                </ul>
-              </li>
-              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a href="/pages/about/index.html"
-                  class="font-medium stickyText">About</a>
-              </li>
-              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a class="font-medium stickyText"
-                  href="/pages/services/index.html">Services</a>
-              </li>
-  
-              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a href="/pages/fetures/index.html"
-                  class="font-medium stickyText">Fetures</a>
-              </li>
-              <li class="relative routeName"><a href="/" class="flex items-center gap-2 cursor-pointer parentHover "><span
-                    class="font-medium stickyText">Blog</span> <i class="fa-solid fa-caret-down stickyText"></i></a>
-                <ul class="bg-white px-5 py-4 w-[150px] absolute transition-all duration-300 routeNameChild">
-                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"><a
-                      class="" href="/pages/blog/index.html">Blog</a></li>
-                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium py-3 hover:text-[#FF4847]">
-                    <a class="text-primary" href="/pages/blogdetails/index.html">Blog Details</a>
-                  </li>
-  
-                </ul>
-              </li>
-              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a href="/pages/contact/index.html"
-                  class="font-medium stickyText">Contact</a>
-              </li>
-            </ul>
+                <li
+                  class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"
+                >
+                  <a
+                    href="/pages/fetures/index.html"
+                    class="font-medium stickyText"
+                    >Fetures</a
+                  >
+                </li>
+                <li class="relative routeName">
+                  <a
+                    href="/"
+                    class="flex items-center gap-2 cursor-pointer parentHover"
+                    ><span class="font-medium stickyText">Blog</span>
+                    <i class="fa-solid fa-caret-down stickyText"></i
+                  ></a>
+                  <ul
+                    class="bg-white px-5 py-4 w-[150px] absolute transition-all duration-300 routeNameChild"
+                  >
+                    <li
+                      class="sub-menu-effect transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"
+                    >
+                      <a class="" href="/pages/blog/index.html">Blog</a>
+                    </li>
+                    <li
+                      class="sub-menu-effect transition-all duration-300 cursor-pointer font-medium py-3 hover:text-[#FF4847]"
+                    >
+                      <a
+                        class="text-primary"
+                        href="/pages/blogdetails/index.html"
+                        >Blog Details</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"
+                >
+                  <a
+                    href="/pages/contact/index.html"
+                    class="font-medium stickyText"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- responsive section start -->
-      <div class="lg:hidden block">
-        <div class="flex items-center gap-4">
-          <div class="toggle cursor-pointer bg-slate-200 h-8 w-8 flex items-center justify-center rounded-full">
-            <i class="fa-solid fa-bars hamburger"></i>
-            <i id="xMark" class="fa-solid fa-xmark hidden"></i>
-          </div>
-          <div>
-            <a href="/">
-              <h6 class="italic sm:block hidden">Sasrico<span class="text-[#FF4847]">.</span></h6>
-            </a>
+        <!-- responsive section start -->
+        <div class="lg:hidden block">
+          <div class="flex items-center gap-4">
+            <div
+              class="toggle cursor-pointer bg-slate-200 h-8 w-8 flex items-center justify-center rounded-full"
+            >
+              <i class="fa-solid fa-bars hamburger"></i>
+              <i id="xMark" class="fa-solid fa-xmark hidden"></i>
+            </div>
+            <div>
+              <a href="/">
+                <h6 class="italic sm:block hidden">
+                  Sasrico<span class="text-[#FF4847]">.</span>
+                </h6>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- responsive section end -->
-      <!-- log in section -->
-      <div class="flex">
-        <button class="text-[14px] font-semibold tracking-[-0.05px] bg-white px-6 py-[6px] rounded-md">Log in</button>
-        <button class="text-[14px] font-semibold tracking-[-0.05px] bg-[#0E0605] text-white px-6 py-[6px] rounded-md">Get
-          stared</button>
-      </div>
-    </nav>
-          <!-- sidebar section -->
+        <!-- responsive section end -->
+        <!-- log in section -->
+        <div class="flex">
+          <button
+            class="text-[14px] font-semibold tracking-[-0.05px] bg-white px-6 py-[6px] rounded-md"
+          >
+            Log in
+          </button>
+          <button
+            class="text-[14px] font-semibold tracking-[-0.05px] bg-[#0E0605] text-white px-6 py-[6px] rounded-md"
+          >
+            Get stared
+          </button>
+        </div>
+      </nav>
+      <!-- sidebar section -->
       <div
-        class="absolute top-16 z-50 lg:hidden bg-[#ff4747] w-48 pl-6 transition-all duration-500 sidebarNav py-5 h-[80vh]">
+        class="absolute top-16 z-50 lg:hidden bg-[#ff4747] w-48 pl-6 transition-all duration-500 sidebarNav py-5 h-[80vh]"
+      >
         <a class="" href="/">
           <h6 class="italic">Sasrico<span class="text-[#fff]">.</span></h6>
         </a>
         <ul class="text-white mt-3">
-          <li class="font-medium flex items-center gap-2 homePage"><a href="#">Home</a> <i
-              class="fa-solid fa-caret-down homeCaret"></i></li>
+          <li class="font-medium flex items-center gap-2 homePage">
+            <a href="#">Home</a>
+            <i class="fa-solid fa-caret-down homeCaret"></i>
+          </li>
           <div class="homeChild ml-3 mt-2">
             <div class="grid gap-2">
               <a class="font-medium hover:underline" href="/">Home-1</a>
-              <a class="font-medium hover:underline" href="./pages/home2/index.html">Home-2</a>
-              <a class="font-medium hover:underline" href="./pages/home3/index.html">Home-3</a>
+              <a
+                class="font-medium hover:underline"
+                href="./pages/home2/index.html"
+                >Home-2</a
+              >
+              <a
+                class="font-medium hover:underline"
+                href="./pages/home3/index.html"
+                >Home-3</a
+              >
             </div>
           </div>
-          <li class="font-medium flex hover:underline items-center gap-2 my-2"><a
-              href="./pages/about/index.html">About</a></li>
-          <li class="font-medium flex hover:underline items-center gap-2"><a
-              href="./pages/services/index.html">Services</a></li>
-          <li class="font-medium flex hover:underline items-center gap-2 my-2"><a href="../fetures/index.html">Fetures</a>
+          <li class="font-medium flex hover:underline items-center gap-2 my-2">
+            <a href="./pages/about/index.html">About</a>
           </li>
-          <li class="font-medium flex items-center gap-2 blogPage cursor-pointer"><a>Blog</a> <i
-              class="fa-solid fa-caret-down blogCaret"></i>
+          <li class="font-medium flex hover:underline items-center gap-2">
+            <a href="./pages/services/index.html">Services</a>
+          </li>
+          <li class="font-medium flex hover:underline items-center gap-2 my-2">
+            <a href="../fetures/index.html">Fetures</a>
+          </li>
+          <li
+            class="font-medium flex items-center gap-2 blogPage cursor-pointer"
+          >
+            <a>Blog</a> <i class="fa-solid fa-caret-down blogCaret"></i>
           </li>
           <div class="blogChild ml-3 mt-2 hidden">
             <div class="grid gap-2">
-              <a class="font-medium hover:underline" href="./pages/blog/index.html">Blog</a>
-              <a class="font-medium hover:underline" href="./pages/blogdetails/index.html">Blog Details</a>
+              <a
+                class="font-medium hover:underline"
+                href="./pages/blog/index.html"
+                >Blog</a
+              >
+              <a
+                class="font-medium hover:underline"
+                href="./pages/blogdetails/index.html"
+                >Blog Details</a
+              >
             </div>
           </div>
-          <li class="font-medium flex items-center hover:underline gap-2 mt-2"><a
-              href="./pages/contact/index.html">Contact</a></li>
+          <li class="font-medium flex items-center hover:underline gap-2 mt-2">
+            <a href="./pages/contact/index.html">Contact</a>
+          </li>
         </ul>
       </div>
-  </header>
-  <!-- navbar section end -->
-  <main>
-    <section class="sm:w-[65%] container mx-auto mb-32 sm:mt-[100px] mt-[40px]">
-      <div class="flex items-center gap-3 relative">
-        <div class="absolute sm:-right-24 right-0 top-2 sm:block hidden">
-          <img src="https://i.ibb.co/Tkr2PXz/Element.png" alt="">
-        </div>
-        <p class="detailsCardShadow z-10">
-          cloud</p>
-        <p class="detailsCardShadow">
-          app development</p>
-      </div>
-      <div class="mt-4 border-b pb-8">
-        <h1 class="!leading-[64px] !text-[60px] tracking--[-0.03em]">15+ Most Effective and Proven Time Management
-          Techniques</h1>
-      </div>
-      <div>
-        <div class="flex items-center justify-between flex-wrap gap-4 mt-6">
-          <p class="font-medium leading-[26px] tracking-[-0.5px]">October 27, 2021 | 4 min read</p>
-          <div class="text-[20px] flex items-center gap-6">
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-pinterest-p"></i>
+    </header>
+    <!-- navbar section end -->
+    <main>
+      <section
+        class="sm:w-[65%] container mx-auto mb-32 sm:mt-[100px] mt-[40px]"
+      >
+        <div class="flex items-center gap-3 relative">
+          <div class="absolute sm:-right-24 right-0 top-2 sm:block hidden">
+            <img src="https://i.ibb.co/Tkr2PXz/Element.png" alt="" />
           </div>
+          <p class="detailsCardShadow z-10">cloud</p>
+          <p class="detailsCardShadow">app development</p>
         </div>
-      </div>
-      <div class="mt-[80px] border-b pb-[48px]">
-        <div class="w-full">
-          <img class="w-full" src="https://i.ibb.co/p4Nnsmp/Img.png" alt="">
-        </div>
-        <div class="mt-[80px]">
-          <h3 class="leading-[42px] tracking-[-0.02em]">The point of using Lorem Ipsum is that it has a more-or-less
-            normal distribution of letters, as opposed to using
-            'Content here</h3>
-          <p class="text-[20px] font-medium leading-[38px] mt-6">It is a long established fact that a reader will be
-            distracted by the readable content of a page when
-            looking at its
-            layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
-            opposed to using
-            'Content here, content here', making it look like readable English. Many desktop publishing packages and web
-            page
-            editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many
-            web sites
-            still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on
-            purpose.</p>
-          <div class="bg-primary px-[55px] py-[32px] rounded-[24px] my-[40px]">
-            <p class="text-[20px] text-white font-medium leading-[38px] italic">“There are many variations of passages
-              of Lorem Ipsum available, but the majority have suffered alteration in some form,
-              by injected humour”</p>
-          </div>
-          <p class="text-[20px] font-medium leading-[38px]">Contrary to popular belief, Lorem Ipsum is not simply random
-            text. It has roots in a piece of classical
-            Latin literature
-            from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
-            in Virginia,
-            looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through
-            the cites of
-            the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32
-            and 1.10.33
-            of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is
-            a treatise
-            on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
-            dolor sit
-            amet..", comes from a line in section 1.10.32.</p>
-        </div>
-      </div>
-      <div>
-        <div class="flex items-center gap-6 mt-10">
-          <p class="text-[18px] font-medium leading-[28px]">Share:</p>
-          <div class="text-[20px] flex items-center gap-6">
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-pinterest-p"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- footer section start -->
-  <footer class="bg-[#1D1E25] pt-[100px] pb-[80px] relative">
-    <div class="absolute right-20 -top-5">
-      <img src="https://i.ibb.co/vv1Pr9c/Element-5.png" alt="">
-    </div>
-    <div class="absolute left-8 top-14">
-      <img src="https://i.ibb.co/mb8r7Mq/Element.png" alt="">
-    </div>
-    <div class="absolute bottom-10">
-      <img src="https://i.ibb.co/gSRDXT3/Element-1.png" alt="">
-    </div>
-    <section class="container mx-auto">
-      <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4">
-        <div>
-          <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Product</p>
-          <ul>
-            <li class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50 ">Email Row</li>
-            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Free
-              Tools</li>
-            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Agents
-            </li>
-            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Blog
-            </li>
-          </ul>
+        <div class="mt-4 border-b pb-8">
+          <h1 class="!leading-[64px] !text-[60px] tracking--[-0.03em]">
+            15+ Most Effective and Proven Time Management Techniques
+          </h1>
         </div>
         <div>
-          <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Resources</p>
-          <ul>
-            <li class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50 ">Our Agents</li>
-            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Member
-              Stories</li>
-            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Video
-            </li>
-            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Free
-              trial</li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Company</p>
-          <ul>
-            <li class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50 ">Patnerships</li>
-            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Terms of
-              use</li>
-            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Privacy
-            </li>
-            <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50">Sitemap
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Get in touch</p>
-          <p class="font-medium leading-5 text-white opacity-50">You’ll find your next Marketing valu you prefer.</p>
-          <div class="flex items-center gap-3 mt-[62px]">
-            <div class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white">
-              <i class="fa-brands fa-facebook-f"></i>
-            </div>
-            <div class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white">
+          <div class="flex items-center justify-between flex-wrap gap-4 mt-6">
+            <p class="font-medium leading-[26px] tracking-[-0.5px]">
+              October 27, 2021 | 4 min read
+            </p>
+            <div class="text-[20px] flex items-center gap-6">
               <i class="fa-brands fa-twitter"></i>
-            </div>
-            <div class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white">
-              <i class="fa-brands fa-linkedin-in"></i>
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-pinterest-p"></i>
             </div>
           </div>
         </div>
-      </div>
-      <div class="flex items-center justify-between flex-wrap mt-[80px]">
-        <div>
-          <p class="text-[30px] font-bold italic text-white">Sasrico<span class="text-primary">.</span></p>
+        <div class="mt-[80px] border-b pb-[48px]">
+          <div class="w-full">
+            <img class="w-full" src="https://i.ibb.co/p4Nnsmp/Img.png" alt="" />
+          </div>
+          <div class="mt-[80px]">
+            <h3 class="leading-[42px] tracking-[-0.02em]">
+              The point of using Lorem Ipsum is that it has a more-or-less
+              normal distribution of letters, as opposed to using 'Content here
+            </h3>
+            <p class="text-[20px] font-medium leading-[38px] mt-6">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here,
+              content here', making it look like readable English. Many desktop
+              publishing packages and web page editors now use Lorem Ipsum as
+              their default model text, and a search for 'lorem ipsum' will
+              uncover many web sites still in their infancy. Various versions
+              have evolved over the years, sometimes by accident, sometimes on
+              purpose.
+            </p>
+            <div
+              class="bg-primary px-[55px] py-[32px] rounded-[24px] my-[40px]"
+            >
+              <p
+                class="text-[20px] text-white font-medium leading-[38px] italic"
+              >
+                “There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour”
+              </p>
+            </div>
+            <p class="text-[20px] font-medium leading-[38px]">
+              Contrary to popular belief, Lorem Ipsum is not simply random text.
+              It has roots in a piece of classical Latin literature from 45 BC,
+              making it over 2000 years old. Richard McClintock, a Latin
+              professor at Hampden-Sydney College in Virginia, looked up one of
+              the more obscure Latin words, consectetur, from a Lorem Ipsum
+              passage, and going through the cites of the word in classical
+              literature, discovered the undoubtable source. Lorem Ipsum comes
+              from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
+              Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
+              BC. This book is a treatise on the theory of ethics, very popular
+              during the Renaissance. The first line of Lorem Ipsum, "Lorem
+              ipsum dolor sit amet..", comes from a line in section 1.10.32.
+            </p>
+          </div>
         </div>
         <div>
-          <p class="font-medium text-white opacity-50">Copyright 2020.com, All rights reserved.</p>
+          <div class="flex items-center gap-6 mt-10">
+            <p class="text-[18px] font-medium leading-[28px]">Share:</p>
+            <div class="text-[20px] flex items-center gap-6">
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-pinterest-p"></i>
+            </div>
+          </div>
         </div>
+      </section>
+    </main>
+
+    <!-- footer section start -->
+    <footer class="bg-[#1D1E25] pt-[100px] pb-[80px] relative">
+      <div class="absolute right-20 -top-5">
+        <img src="https://i.ibb.co/vv1Pr9c/Element-5.png" alt="" />
       </div>
-    </section>
-  </footer>
-  <!-- footer section end -->
+      <div class="absolute left-8 top-14">
+        <img src="https://i.ibb.co/mb8r7Mq/Element.png" alt="" />
+      </div>
+      <div class="absolute bottom-10">
+        <img src="https://i.ibb.co/gSRDXT3/Element-1.png" alt="" />
+      </div>
+      <section class="container mx-auto">
+        <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4">
+          <div>
+            <p
+              class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10"
+            >
+              Product
+            </p>
+            <ul>
+              <li
+                class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50"
+              >
+                Email Row
+              </li>
+              <li
+                class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+              >
+                Free Tools
+              </li>
+              <li
+                class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+              >
+                Agents
+              </li>
+              <li
+                class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+              >
+                Blog
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p
+              class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10"
+            >
+              Resources
+            </p>
+            <ul>
+              <li
+                class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50"
+              >
+                Our Agents
+              </li>
+              <li
+                class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+              >
+                Member Stories
+              </li>
+              <li
+                class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+              >
+                Video
+              </li>
+              <li
+                class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+              >
+                Free trial
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p
+              class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10"
+            >
+              Company
+            </p>
+            <ul>
+              <li
+                class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50"
+              >
+                Patnerships
+              </li>
+              <li
+                class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+              >
+                Terms of use
+              </li>
+              <li
+                class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+              >
+                Privacy
+              </li>
+              <li
+                class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+              >
+                Sitemap
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p
+              class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10"
+            >
+              Get in touch
+            </p>
+            <p class="font-medium leading-5 text-white opacity-50">
+              You’ll find your next Marketing valu you prefer.
+            </p>
+            <div class="flex items-center gap-3 mt-[62px]">
+              <div
+                class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <div
+                class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div
+                class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between flex-wrap mt-[80px]">
+          <div>
+            <p class="text-[30px] font-bold italic text-white">
+              Sasrico<span class="text-primary">.</span>
+            </p>
+          </div>
+          <div>
+            <p class="font-medium text-white opacity-50">
+              Copyright 2020.com, All rights reserved.
+            </p>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- footer section end -->
 
-  <script src="/assests/script/nav.js"></script>
-</body>
-
+    <script src="/assests/script/nav.js"></script>
+  </body>
 </html>

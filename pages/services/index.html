@@ -1,924 +1,1533 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="/pages/services/style.css" />
+    <link rel="stylesheet" href="/assests/style/nav.css" />
+    <link rel="stylesheet" href="../../assests/style/responsive.css" />
+    <!-- font-awesome -->
+    <script
+      src="https://kit.fontawesome.com/14d27916cf.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- flat icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <!-- swiperjs -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- tailwindcss -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- styles -->
-  <link rel="stylesheet" href="/pages/services/style.css">
-  <link rel="stylesheet" href="/assests/style/nav.css">
-  <link rel="stylesheet" href="../../assests/style/responsive.css">
-  <!-- font-awesome -->
-  <script src="https://kit.fontawesome.com/14d27916cf.js" crossorigin="anonymous"></script>
-  <!-- flat icon -->
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-  <!-- swiperjs -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <title>Document</title>
-</head>
+  <body class="overflow-x-hidden">
+    <!-- navbar section start -->
+    <header class="py-6 transition-all duration-300 !z-50">
+      <nav class="container mx-auto flex justify-between items-center relative">
+        <div class="lg:block hidden">
+          <div class="flex items-center gap-9">
+            <!-- logo section -->
+            <div>
+              <a href="/">
+                <h6 class="italic">
+                  Sasrico<span class="text-[#FF4847] stickyText">.</span>
+                </h6>
+              </a>
+            </div>
+            <!-- route section -->
+            <div>
+              <ul class="flex items-center gap-6">
+                <li class="relative routeName">
+                  <a
+                    href="/"
+                    class="flex items-center gap-2 cursor-pointer parentHover"
+                    ><span class="font-medium stickyText">Home</span>
+                    <i class="fa-solid fa-caret-down stickyText"></i
+                  ></a>
+                  <ul
+                    class="bg-white px-5 py-4 w-[120px] absolute transition-all duration-300 routeNameChild"
+                  >
+                    <li
+                      class="sub-menu-effect transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"
+                    >
+                      <a href="/">Home-1</a>
+                    </li>
+                    <li
+                      class="sub-menu-effect transition-all duration-300 cursor-pointer font-medium py-3 hover:text-[#FF4847]"
+                    >
+                      <a href="/pages/home2/index.html">Home-2</a>
+                    </li>
+                    <li
+                      class="sub-menu-effect transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"
+                    >
+                      <a href="/pages/home3/index.html">Home-3</a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"
+                >
+                  <a
+                    href="/pages/about/index.html"
+                    class="font-medium stickyText"
+                    >About</a
+                  >
+                </li>
+                <li
+                  class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"
+                >
+                  <a
+                    class="font-medium stickyText"
+                    href="/pages/services/index.html"
+                    >Services</a
+                  >
+                </li>
 
-<body class="overflow-x-hidden">
-  <!-- navbar section start -->
-  <header class="py-6 transition-all duration-300 !z-50">
-    <nav class="container mx-auto flex justify-between items-center relative">
-      <div class="lg:block hidden">
-        <div class="flex items-center gap-9">
-          <!-- logo section -->
-          <div>
-            <a href="/">
-              <h6 class="italic">Sasrico<span class="text-[#FF4847] stickyText">.</span></h6>
-            </a>
-          </div>
-          <!-- route section -->
-          <div>
-            <ul class="flex items-center gap-6">
-              <li class="relative routeName"><a href="/" class="flex items-center gap-2 cursor-pointer parentHover "><span
-                    class="font-medium stickyText">Home</span> <i class="fa-solid fa-caret-down stickyText"></i></a>
-                <ul class="bg-white px-5 py-4 w-[120px] absolute transition-all duration-300 routeNameChild">
-                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"><a
-                      href="/">Home-1</a></li>
-                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium py-3 hover:text-[#FF4847]">
-                    <a href="/pages/home2/index.html">Home-2</a>
-                  </li>
-                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"><a
-                      href="/pages/home3/index.html">Home-3</a></li>
-                </ul>
-              </li>
-              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a href="/pages/about/index.html"
-                  class="font-medium stickyText">About</a>
-              </li>
-              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a class="font-medium stickyText"
-                  href="/pages/services/index.html">Services</a>
-              </li>
-  
-              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a href="/pages/fetures/index.html"
-                  class="font-medium stickyText">Fetures</a>
-              </li>
-              <li class="relative routeName"><a href="/" class="flex items-center gap-2 cursor-pointer parentHover "><span
-                    class="font-medium stickyText">Blog</span> <i class="fa-solid fa-caret-down stickyText"></i></a>
-                <ul class="bg-white px-5 py-4 w-[150px] absolute transition-all duration-300 routeNameChild">
-                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"><a
-                      class="" href="/pages/blog/index.html">Blog</a></li>
-                  <li class="hover:pl-2 transition-all duration-300 cursor-pointer font-medium py-3 hover:text-[#FF4847]">
-                    <a href="/pages/blogdetails/index.html">Blog Details</a>
-                  </li>
-  
-                </ul>
-              </li>
-              <li class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"><a href="/pages/contact/index.html"
-                  class="font-medium stickyText">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- responsive section start -->
-      <div class="lg:hidden block">
-        <div class="flex items-center gap-4">
-          <div class="toggle cursor-pointer bg-slate-200 h-8 w-8 flex items-center justify-center rounded-full">
-            <i class="fa-solid fa-bars hamburger"></i>
-            <i id="xMark" class="fa-solid fa-xmark hidden"></i>
-          </div>
-          <div>
-            <a href="/">
-              <h6 class="italic sm:block hidden">Sasrico<span class="text-[#FF4847]">.</span></h6>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- responsive section end -->
-      <!-- log in section -->
-      <div class="flex">
-        <button class="text-[14px] font-semibold tracking-[-0.05px] bg-white px-6 py-[6px] rounded-md">Log in</button>
-        <button class="text-[14px] font-semibold tracking-[-0.05px] bg-[#0E0605] text-white px-6 py-[6px] rounded-md">Get
-          stared</button>
-      </div>
-      <!-- sidebar section -->
-      <div
-        class="absolute top-10 z-50 lg:hidden bg-[#ff4747] w-48 pl-6 transition-all duration-500 sidebarNav py-5 h-[80vh]">
-        <a class="" href="/">
-          <h6 class="italic">Sasrico<span class="text-[#fff]">.</span></h6>
-        </a>
-        <ul class="text-white mt-3">
-          <li class="font-medium flex items-center gap-2 homePage"><a href="#">Home</a> <i
-              class="fa-solid fa-caret-down homeCaret"></i></li>
-          <div class="homeChild ml-3 mt-2">
-            <div class="grid gap-2">
-              <a class="font-medium hover:underline" href="/">Home-1</a>
-              <a class="font-medium hover:underline" href="./pages/home2/index.html">Home-2</a>
-              <a class="font-medium hover:underline" href="./pages/home3/index.html">Home-3</a>
-            </div>
-          </div>
-          <li class="font-medium flex hover:underline items-center gap-2 my-2"><a
-              href="./pages/about/index.html">About</a></li>
-          <li class="font-medium flex hover:underline items-center gap-2"><a
-              href="./pages/services/index.html">Services</a></li>
-          <li class="font-medium flex hover:underline items-center gap-2 my-2"><a href="../fetures/index.html">Fetures</a>
-          </li>
-          <li class="font-medium flex items-center gap-2 blogPage cursor-pointer"><a>Blog</a> <i
-              class="fa-solid fa-caret-down blogCaret"></i>
-          </li>
-          <div class="blogChild ml-3 mt-2 hidden">
-            <div class="grid gap-2">
-              <a class="font-medium hover:underline" href="./pages/blog/index.html">Blog</a>
-              <a class="font-medium hover:underline" href="./pages/blogdetails/index.html">Blog Details</a>
-            </div>
-          </div>
-          <li class="font-medium flex items-center hover:underline gap-2 mt-2"><a
-              href="./pages/contact/index.html">Contact</a></li>
-        </ul>
-      </div>
-  
-    </nav>
-  </header>
-  <!-- navbar section end -->
-
-  <main>
-    <!-- hero section start -->
-    <section class="relative mb-[100px] lg:mb-[50px]">
-      <div class="container mx-auto pt-[55px]">
-        <div class="flex items-center justify-between lg:flex-row flex-col gap-20">
-          <div class="lg:w-[570px]">
-            <div class="mb-[24px] relative">
-              <div class="absolute top-[-100px] md:block hidden lg:left-[-50px]">
-                <img src="https://i.ibb.co/9Nr2g0K/Vector-1.png" alt="">
-              </div>
-              <h1 class="">
-                We help to create easy
-                <span class="text_primary">
-                  process
-                </span>
-              </h1>
-            </div>
-            <div class="">
-              <p class="text-[18px] text-[#808D9E] font-medium leading-[28px] mb-[48px]">
-                There is a time management facility through this modern software.
-                Effective time management allows you to achieve great results .
-              </p>
-              <div class="">
-                <button class="text-white text-[16px] font-bold rounded-[8px] px-[32px] py-[16px] bg_primary">Get
-                  started
-                  now</button>
-              </div>
-            </div>
-          </div>
-          <!-- ******************** -->
-          <div class="relative z-10">
-            <div class="">
-              <!-- blackCircleBG -->
-              <div class="bg-black lg:w-[500px] w-[380px] z-[-5] h-[550px] relative rounded-[24px]">
-                <div class="absolute bottom-0 md:right-[-20%]">
-                  <img class="" src="https://i.ibb.co/CV7zdyb/Img-5.png" alt="">
-                </div>
-                <div class="absolute right-[-10%] md:block hidden top-[20%] z-[-1]">
-                  <div class="w-[200px] relative bg-white features_Shadow rounded-[8px]">
-                    <div class=" px-[20px] py-[30px]">
-                      <div class="flex justify-between">
-                        <div class="">
-                          <div class="flex gap-5 items-center">
-                            <div class="h-[5px] w-[5px] rounded-full bg_primary"></div>
-                            <p class="text-[14px] font-bold">$500+</p>
-                          </div>
-                          <p class="text-[#808D9E] text-[10px] font-medium text-center pl-[15px]">
-                            Earn
-                            per day
-                          </p>
-                        </div>
-                        <div class="">
-                          <div class="flex gap-5 items-center">
-                            <div class="h-[5px] w-[5px] rounded-full bg-[#D9E8FF]"></div>
-                            <p class="text-[14px] font-bold">$50</p>
-                          </div>
-                          <p class="text-[#808D9E] text-[10px] font-medium text-center pl-[15px]">
-                            Pay us
-                          </p>
-                        </div>
-                      </div>
-                      <div class="mt-[28px] flex items-center justify-center">
-                        <img src="https://i.ibb.co/SJYjxcw/Shape.png" alt="">
-                      </div>
-                      <div class="text-center">
-                        <p class="text-[19px] font-bold">$15,000+</p>
-                        <p class="text-[#808D9E] text-[10px]">Earning</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="bg_primary absolute rounded-[9px] bottom-[7%] right-[-17%]">
-                    <div class="py-[15px] px-[14px]">
-                      <p class="text-white font-bold text-[10px] mb-[13px]">Dashboard</p>
-                      <img src="https://i.ibb.co/JKM7Zp8/Shape-1.png" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--  -->
-              <div class="absolute left-[-10%] top-0 md:top-20">
-                <img class="" src="https://i.ibb.co/KwYYhrB/Element-7.png" alt="">
-              </div>
+                <li
+                  class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"
+                >
+                  <a
+                    href="/pages/fetures/index.html"
+                    class="font-medium stickyText"
+                    >Fetures</a
+                  >
+                </li>
+                <li class="relative routeName">
+                  <a
+                    href="/"
+                    class="flex items-center gap-2 cursor-pointer parentHover"
+                    ><span class="font-medium stickyText">Blog</span>
+                    <i class="fa-solid fa-caret-down stickyText"></i
+                  ></a>
+                  <ul
+                    class="bg-white px-5 py-4 w-[150px] absolute transition-all duration-300 routeNameChild"
+                  >
+                    <li
+                      class="sub-menu-effect transition-all duration-300 cursor-pointer font-medium hover:text-[#FF4847]"
+                    >
+                      <a class="" href="/pages/blog/index.html">Blog</a>
+                    </li>
+                    <li
+                      class="sub-menu-effect transition-all duration-300 cursor-pointer font-medium py-3 hover:text-[#FF4847]"
+                    >
+                      <a href="/pages/blogdetails/index.html">Blog Details</a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="flex items-center gap-2 hover:text-[#FF4847] cursor-pointer"
+                >
+                  <a
+                    href="/pages/contact/index.html"
+                    class="font-medium stickyText"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>
-      <div class="absolute bottom-10 md:bottom-10 lg:top-52 right-0  lg:left-[130px]">
-        <img class="-z-10" src="https://i.ibb.co/6gVDndv/Line.png" alt="">
-      </div>
-    </section>
-    <!-- hero section end -->
-    <!-- fetures section start -->
-    <section class="container mx-auto mt-[150px] relative">
-      <div class="absolute -left-8 sm:block hidden">
-        <img src="https://i.ibb.co/02KmH4L/Element-2.png" alt="">
-      </div>
-      <div class="md:w-[610px] mx-auto">
-        <p class="text-[14px] text_primary text-center mb-3 font-bold leading-5 tracking-[-0.05px]">Features</p>
-        <h1 class="!text-[60px] leading-[64px] tracking-[0.0.3em] text-center"><span class="text_primary">Paying
-            off</span> and
-          adjust your strategy.</h1>
-      </div>
-      <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 mt-16 mb-24">
-        <div class="bg-white px-6 py-9 rounded-2xl feturesCard">
-          <i class="fi fi-rs-settings text-[24px] text_primary"></i>
-          <p class="text-[24px] font-bold mb-4 leading-[30px] mt-8 tracking-[-1px]">Analyze your data</p>
-          <p class="text-[#808D9E] font-medium leading-6">Resource management is the process of pre-planning,</p>
-        </div>
-        <div class="bg-white px-6 py-9 rounded-2xl feturesCard md:mt-16">
-          <i class="fa-solid fa-chart-line text-[24px] text_primary"></i>
-          <p class="text-[24px] font-bold mb-4 leading-[30px] mt-8 tracking-[-1px]">Embedded analytics</p>
-          <p class="text-[#808D9E] font-medium leading-6">Resource management is the process of pre-planning,</p>
-        </div>
-        <div class="bg-white px-6 py-9 rounded-2xl feturesCard">
-          <i class="fi fi-rr-users text-[24px] text_primary"></i>
-          <p class="text-[24px] font-bold mb-4 leading-[30px] mt-8 tracking-[-1px]">Collaborate securely</p>
-          <p class="text-[#808D9E] font-medium leading-6">Resource management is the process of pre-planning,</p>
-        </div>
-        <div class="bg-white px-6 py-9 rounded-2xl feturesCard md:mt-16">
-          <div>
-            <img src="./assests//images/icon/file.png" alt="">
-          </div>
-          <p class="text-[24px] font-bold mb-4 leading-[30px] mt-8 tracking-[-1px]">Unified reporting</p>
-          <p class="text-[#808D9E] font-medium leading-6">Resource management is the process of pre-planning,</p>
-        </div>
-      </div>
-    </section>
-    <!-- fetures section end -->
-
-    <!-- Our process START -->
-    <section class="mt-[40px] overflow-hidden">
-      <div class="secondary-container mx-auto">
-        <div class="bg-[#FF4847] z-[-5] w-full rounded-[32px] relative">
-          <div class="">
-            <img class="absolute right-0 bottom-0 z-[-10]" src="https://i.ibb.co/CKbV084/Element-1.png" alt="">
-          </div>
-          <!-- Transform Work -->
-          <div class="f_f">
-          </div>
-          <div class="py-[116px] ml-[20px] lg:ml-[80px]">
-            <div class="flex gap-[50px] lg:gap-12 md:felx-r0w flex-col md:flex-row items-center mb-[48px]">
-              <div class="mt-[16px]">
-                <p class="text-[16px] font-bold leading-[20px] text-white">
-                  OUR PROCESS
-                </p>
-                <h2 class="text-white">
-                  Standard <br class="md:block hidden"> work process
-                </h2>
-              </div>
-              <div class="text-white lg:ml-[200px]">
-                <p class="text-[16px] font-medium">Resource management is the <br> process of pre-planning,
-                  scheduli</p>
-              </div>
-            </div>
-            <div class="flex lg:flex-row flex-col justify-between gap-[20px] items-center mr-10">
-              <div class="lg:w-[470px]">
-                <div class="">
-                  <div class="flex items-center gap-[20px] mb-[36px]">
-                    <p class="px-[24px] py-[15px] font-bold text-white bg-black rounded-full text-[20px]">
-                      1</p>
-                    <div class="">
-                      <p class="text-[20px] font-bold text-white mb-[10px]">Choose plan</p>
-                      <p class="text-[16px] font-medium text-white">
-                        Subscribe to a plan that suits you better and place orders as many as you
-                        want.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="flex items-center gap-[20px] mb-[36px]">
-                    <p class="px-[24px] py-[15px] font-bold text-white bg-black rounded-full text-[20px]">
-                      2</p>
-                    <div class="">
-                      <p class="text-[20px] font-bold text-white mb-[10px]">Make payment</p>
-                      <p class="text-[16px] font-medium text-white">
-                        Subscribe to a plan that suits you better and place orders as many as you
-                        want.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="flex items-center gap-[20px] mb-[36px]">
-                    <p class="px-[24px] py-[15px] font-bold text-white bg-black rounded-full text-[20px]">
-                      3</p>
-                    <div class="">
-                      <p class="text-[20px] font-bold text-white mb-[10px]">Install and feel</p>
-                      <p class="text-[16px] font-medium text-white">
-                        Subscribe to a plan that suits you better and place orders as many as you
-                        want.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- **** -->
-              <div class="relative md:w-[500px]">
-                <div class="">
-                  <img class="" src="https://i.ibb.co/rdBDMjR/Img-3.png" alt="">
-                  <div class="absolute bottom-[7%] left-[-10%] overflow-hidden">
-                    <img src="https://i.ibb.co/DGL3svs/Element-23.png" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- Our process END -->
-
-    <!-- Our strategy START -->
-    <section class="pt-[150px]">
-      <div class="relative">
-        <div class="absolute bottom-[-20%] left-0 z-[-1] hidden lg:block">
-          <img src="https://i.ibb.co/PN09cHH/Vector-620.png" alt="">
-        </div>
-        <div class="container mx-auto">
-          <div class="flex lg:flex-row flex-col justify-between gap-32 items-center">
+        <!-- responsive section start -->
+        <div class="lg:hidden block">
+          <div class="flex items-center gap-4">
             <div
-              class="flex md:flex-row flex-col justify-center lg:justify-normal gap-14 items-center relative lg:w-[470px] ">
-              <div class="absolute top-[-2%] right-0">
-                <img src="https://i.ibb.co/HNnyzxr/Element-24.png" alt="">
-              </div>
-              <div class="w-full">
-                <img class="w-full" src="https://i.ibb.co/bBhQ1vv/Img-4.png" alt="">
-              </div>
-            </div>
-            <!-- collaborate -->
-            <div class="">
-              <div class="">
-                <div class="mb-[30px]">
-                  <p class="text-[16px] font-bold leading-[20px] text_primary mb-[16px]">OUR STRATEGY</p>
-                  <h2>
-                    Find out what <br class="lg:block hidden"> we've <span class="text_primary">achieved</span><br
-                      class="lg:block hidden"> for you
-                  </h2>
-                </div>
-                <div class="mb-[48px]">
-                  <div class="flex lg:flex-row flex-col gap-[12px] md:gap-12">
-                    <div class="">
-                      <li class="flex items-center gap-3 mb-[12px]">
-                        <i class="fa-solid fa-circle-check text-[18px]"></i>
-                        <p class="text-[18px] font-medium leading-[28px]">
-                          Organize your data
-                        </p>
-                      </li>
-                      <li class="flex items-center gap-3 mb-[12px]">
-                        <i class="fa-solid fa-circle-check text-[18px]"></i>
-                        <p class="text-[18px] font-medium leading-[28px]">
-                          Work with any team
-                        </p>
-                      </li>
-                      <li class="flex items-center gap-3">
-                        <i class="fa-solid fa-circle-check text-[18px]"></i>
-                        <p class="text-[18px] font-medium leading-[28px]">
-                          Business analytics
-                        </p>
-                      </li>
-                    </div>
-                    <div class="">
-                      <li class="flex items-center gap-3 mb-[12px]">
-                        <i class="fa-solid fa-circle-check text-[18px]"></i>
-                        <p class="text-[18px] font-medium leading-[28px]">
-                          Always in sync
-                        </p>
-                      </li>
-                      <li class="flex items-center gap-3 mb-[12px]">
-                        <i class="fa-solid fa-circle-check text-[18px]"></i>
-                        <p class="text-[18px] font-medium leading-[28px]">
-                          Embedded analytics
-                        </p>
-                      </li>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  class="text-[16px] leading-[20px] font-bold text-white bg_primary px-[32px] py-[16px] rounded-[8px]">
-                  Get started now
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Our strategy END -->
-
-    <section class="mt-32 mb-32">
-      <div class="container mx-auto">
-        <p class="text-[18px] text-secondary text-center font-medium leading-7">Pricing plan</p>
-        <h1 class="!text-[60px] leading-[64px] tracking-[-0.03em] text-center mt-4">Simple but effective</h1>
-        <div class="flex gap-8 justify-center mt-11">
-          <h6 class="leading-[26px] tracking-[-1px]">Pay Monthly</h6>
-          <div id="switchBtn" class="">
-            <div class="h-[24px] w-[24px] bg-white rounded-full cursor-pointer"></div>
-          </div>
-          <h6 class="leading-[26px] tracking-[-1px]">Pay Yearly</h6>
-        </div>
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-[30px] mt-[100px]">
-          <div class="h-[512px] pricingCard border border-[#E9ECF2] rounded-[16px] px-8 py-[60px]">
-            <div class="flex justify-between">
-              <h3 class="text-[#FF4847] leading-[42px] tracking-[-0.02em]">Free</h3>
-              <p class="text-[18px] font-medium leading-7">Starter</p>
-            </div>
-            <p class="font-bold leading-5 tracking-[-1px] mt-1">/month</p>
-            <ul class="grid gap-3 mt-[46px]">
-              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
-                <p>Online transactions</p>
-              </li>
-              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
-                <p>ATH withdrawals</p>
-              </li>
-              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
-                <p>Easy control</p>
-              </li>
-              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
-                <p>Location-based security</p>
-              </li>
-              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
-                <p>Online Banking</p>
-              </li>
-            </ul>
-            <button
-              class="font-medium leading-5 tracking-[-0.5px] mt-12 text-white px-7 py-3 rounded-[8px] bg-[#1D1E25]">Choose
-              plan</button>
-          </div>
-          <div class="h-[512px] pricingCard border border-[#E9ECF2] rounded-[16px] px-8 py-[60px]">
-            <div class="flex justify-between">
-              <h3 class="text-[#FF4847] leading-[42px] tracking-[-0.02em]">$49</h3>
-              <p class="text-[18px] font-medium leading-7">Premium</p>
-            </div>
-            <p class="font-bold leading-5 tracking-[-1px] mt-1">/month</p>
-            <ul class="grid gap-3 mt-[46px]">
-              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
-                <p>Online transactions</p>
-              </li>
-              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
-                <p>ATH withdrawals</p>
-              </li>
-              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
-                <p>Easy control</p>
-              </li>
-              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
-                <p>Location-based security</p>
-              </li>
-              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
-                <p>Online Banking</p>
-              </li>
-            </ul>
-            <button
-              class="font-medium leading-5 tracking-[-0.5px] mt-12 text-white px-7 py-3 rounded-[8px] bg-[#1D1E25]">Choose
-              plan</button>
-          </div>
-          <div class="h-[512px] pricingCard border border-[#E9ECF2] rounded-[16px] px-8 py-[60px]">
-            <div class="flex justify-between">
-              <h3 class="text-[#FF4847] leading-[42px] tracking-[-0.02em]">$49</h3>
-              <p class="text-[18px] font-medium leading-7">Ultimate</p>
-            </div>
-            <p class="font-bold leading-5 tracking-[-1px] mt-1">/month</p>
-            <ul class="grid gap-3 mt-[46px]">
-              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
-                <p>Online transactions</p>
-              </li>
-              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
-                <p>ATH withdrawals</p>
-              </li>
-              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
-                <p>Easy control</p>
-              </li>
-              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
-                <p>Location-based security</p>
-              </li>
-              <li class="text-[18px] font-medium leading-7 flex items-center gap-3"><i class="fa-solid fa-check"></i>
-                <p>Online Banking</p>
-              </li>
-            </ul>
-            <button
-              class="font-medium leading-5 tracking-[-0.5px] mt-12 text-white px-7 py-3 rounded-[8px] bg-[#1D1E25]">Choose
-              plan</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- testimonials section start -->
-    <section class="relative">
-      <div class="absolute sm:-bottom-[15%] -bottom-[10%]">
-        <img src="https://i.ibb.co/XJQsvFp/Line-3.png" alt="">
-      </div>
-      <div class="absolute right-[25%] sm:-bottom-[15%] -bottom-[10%]">
-        <img src="https://i.ibb.co/HPQ839B/Element-3.png" alt="">
-      </div>
-      <div class="secondary-container mx-auto overflow-hidden mt-32 rounded-[32px] mb-40">
-
-        <div class="flex justify-end -mr-8">
-          <div class="flex w-[40%] relative">
-            <div class="h-[56px] bg-[#1D1E25] w-[35%] -mr-8 skew-x-[-35deg]"></div>
-            <div class="h-[56px] bg-[#1D1E25] w-[65%] "></div>
-            <div class="absolute right-[65%] -bottom-12">
-              <img src="https://i.ibb.co/RShNZJ0/Vector-1.png" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="bg-[#1D1E25] p-[50px]">
-          <p class="text-[14px] uppercase text_primary font-bold leading-5 tracking-[-0.05px] mb-5">testimonials</p>
-          <div class="flex justify-between flex-wrap gap-3">
-            <div class="w-[650px]">
-              <h1 class="leading-[64px] tracking-[-0.03em] text-white">See what our <span
-                  class="text_primary">customers</span> had to
-                say</h1>
+              class="toggle cursor-pointer bg-slate-200 h-8 w-8 flex items-center justify-center rounded-full"
+            >
+              <i class="fa-solid fa-bars hamburger"></i>
+              <i id="xMark" class="fa-solid fa-xmark hidden"></i>
             </div>
             <div>
-              <button class="text-white font-bold leading-5 tracking-[-0.05px] bg_primary px-6 py-3 rounded-md">View
-                all</button>
-            </div>
-          </div>
-          <div class="mt-[64px]">
-            <div class="swiper-container overflow-hidden">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide ">
-                  <div class="bg-white px-6 py-8 rounded-[16px]">
-                    <div class="flex gap-2 items-center">
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                    </div>
-                    <p class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]">“Our members are so
-                      impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.</p>
-                    <div>
-                      <p class="text-[20px] font-bold leading-[26px] tracking-[-1px]">Sabo Masties</p>
-                      <p class="text-[14px] leading-[22px]">Founder @ Rolex</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide ">
-                  <div class="bg-white px-6 py-8 rounded-[16px]">
-                    <div class="flex gap-2 items-center">
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                    </div>
-                    <p class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]">I could not be more
-                      thrilled that I ended up deciding on Circle to become the home of the Lightbulb Moment community.
-                    </p>
-                    <div>
-                      <p class="text-[20px] font-bold leading-[26px] tracking-[-1px]">John Marko</p>
-                      <p class="text-[14px] leading-[22px]">Founder @ Rolex</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide ">
-                  <div class="bg-white px-6 py-8 rounded-[16px]">
-                    <div class="flex gap-2 items-center">
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                    </div>
-                    <p class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]">“Our members are so
-                      impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.</p>
-                    <div>
-                      <p class="text-[20px] font-bold leading-[26px] tracking-[-1px]">John Marko</p>
-                      <p class="text-[14px] leading-[22px]">Founder @ Rolex</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide ">
-                  <div class="bg-white px-6 py-8 rounded-[16px]">
-                    <div class="flex gap-2 items-center">
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                    </div>
-                    <p class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]">I could not be more
-                      thrilled that I
-                      ended up deciding on Circle to become the home of the Lightbulb Moment community.</p>
-                    <div>
-                      <p class="text-[20px] font-bold leading-[26px] tracking-[-1px]">John Marko</p>
-                      <p class="text-[14px] leading-[22px]">Founder @ Rolex</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide ">
-                  <div class="bg-white px-6 py-8 rounded-[16px]">
-                    <div class="flex gap-2 items-center">
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                    </div>
-                    <p class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]">“Our members are so
-                      impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.</p>
-                    <div>
-                      <p class="text-[20px] font-bold leading-[26px] tracking-[-1px]">Sabo Masties</p>
-                      <p class="text-[14px] leading-[22px]">Founder @ Rolex</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide ">
-                  <div class="bg-white px-6 py-8 rounded-[16px]">
-                    <div class="flex gap-2 items-center">
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                    </div>
-                    <p class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]">“Our members are so
-                      impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.</p>
-                    <div>
-                      <p class="text-[20px] font-bold leading-[26px] tracking-[-1px]">John Marko</p>
-                      <p class="text-[14px] leading-[22px]">Founder @ Rolex</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide ">
-                  <div class="bg-white px-6 py-8 rounded-[16px]">
-                    <div class="flex gap-2 items-center">
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                    </div>
-                    <p class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]">“Our members are so
-                      impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.</p>
-                    <div>
-                      <p class="text-[20px] font-bold leading-[26px] tracking-[-1px]">Sabo Masties</p>
-                      <p class="text-[14px] leading-[22px]">Founder @ Rolex</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide ">
-                  <div class="bg-white px-6 py-8 rounded-[16px]">
-                    <div class="flex gap-2 items-center">
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                    </div>
-                    <p class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]">“Our members are so
-                      impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.</p>
-                    <div>
-                      <p class="text-[20px] font-bold leading-[26px] tracking-[-1px]">Sabo Masties</p>
-                      <p class="text-[14px] leading-[22px]">Founder @ Rolex</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide ">
-                  <div class="bg-white px-6 py-8 rounded-[16px]">
-                    <div class="flex gap-2 items-center">
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                    </div>
-                    <p class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]">I could not be more
-                      thrilled that I
-                      ended up deciding on Circle to become the home of the Lightbulb Moment community.</p>
-                    <div>
-                      <p class="text-[20px] font-bold leading-[26px] tracking-[-1px]">John Marko</p>
-                      <p class="text-[14px] leading-[22px]">Founder @ Rolex</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide ">
-                  <div class="bg-white px-6 py-8 rounded-[16px]">
-                    <div class="flex gap-2 items-center">
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                    </div>
-                    <p class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]">“Our members are so
-                      impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.</p>
-                    <div>
-                      <p class="text-[20px] font-bold leading-[26px] tracking-[-1px]">Sabo Masties</p>
-                      <p class="text-[14px] leading-[22px]">Founder @ Rolex</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide ">
-                  <div class="bg-white px-6 py-8 rounded-[16px]">
-                    <div class="flex gap-2 items-center">
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                      <i class="fa-solid fa-star text-[#FF9515] text-[16.67px]"></i>
-                    </div>
-                    <p class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]">I could not be more
-                      thrilled that I ended up deciding on Circle to become the home of the Lightbulb Moment community.
-                    </p>
-                    <div>
-                      <p class="text-[20px] font-bold leading-[26px] tracking-[-1px]">John Marko</p>
-                      <p class="text-[14px] leading-[22px]">Founder @ Rolex</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <a href="/">
+                <h6 class="italic sm:block hidden">
+                  Sasrico<span class="text-[#FF4847]">.</span>
+                </h6>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- testimonials section end -->
+        <!-- responsive section end -->
+        <!-- log in section -->
+        <div class="flex">
+          <button
+            class="text-[14px] font-semibold tracking-[-0.05px] bg-white px-6 py-[6px] rounded-md"
+          >
+            Log in
+          </button>
+          <button
+            class="text-[14px] font-semibold tracking-[-0.05px] bg-[#0E0605] text-white px-6 py-[6px] rounded-md"
+          >
+            Get stared
+          </button>
+        </div>
+        <!-- sidebar section -->
+        <div
+          class="absolute top-10 z-50 lg:hidden bg-[#ff4747] w-48 pl-6 transition-all duration-500 sidebarNav py-5 h-[80vh]"
+        >
+          <a class="" href="/">
+            <h6 class="italic">Sasrico<span class="text-[#fff]">.</span></h6>
+          </a>
+          <ul class="text-white mt-3">
+            <li class="font-medium flex items-center gap-2 homePage">
+              <a href="#">Home</a>
+              <i class="fa-solid fa-caret-down homeCaret"></i>
+            </li>
+            <div class="homeChild ml-3 mt-2">
+              <div class="grid gap-2">
+                <a class="font-medium hover:underline" href="/">Home-1</a>
+                <a
+                  class="font-medium hover:underline"
+                  href="./pages/home2/index.html"
+                  >Home-2</a
+                >
+                <a
+                  class="font-medium hover:underline"
+                  href="./pages/home3/index.html"
+                  >Home-3</a
+                >
+              </div>
+            </div>
+            <li
+              class="font-medium flex hover:underline items-center gap-2 my-2"
+            >
+              <a href="./pages/about/index.html">About</a>
+            </li>
+            <li class="font-medium flex hover:underline items-center gap-2">
+              <a href="./pages/services/index.html">Services</a>
+            </li>
+            <li
+              class="font-medium flex hover:underline items-center gap-2 my-2"
+            >
+              <a href="../fetures/index.html">Fetures</a>
+            </li>
+            <li
+              class="font-medium flex items-center gap-2 blogPage cursor-pointer"
+            >
+              <a>Blog</a> <i class="fa-solid fa-caret-down blogCaret"></i>
+            </li>
+            <div class="blogChild ml-3 mt-2 hidden">
+              <div class="grid gap-2">
+                <a
+                  class="font-medium hover:underline"
+                  href="./pages/blog/index.html"
+                  >Blog</a
+                >
+                <a
+                  class="font-medium hover:underline"
+                  href="./pages/blogdetails/index.html"
+                  >Blog Details</a
+                >
+              </div>
+            </div>
+            <li
+              class="font-medium flex items-center hover:underline gap-2 mt-2"
+            >
+              <a href="./pages/contact/index.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- navbar section end -->
 
-    <!-- Faq START -->
-    <section>
-      <div class="container mx-auto pt-[70px] mb-[150px]">
-        <div class="text-center mb-[64px]">
-          <p class="mb-[16px] text-[14px] font-bold text-[#FF6A55]">FAQ</p>
-          <h2>
-            Anything <span class="text-[#FF4847]">we can help</span> <br> you with?
-          </h2>
-        </div>
-        <div class="lg:w-[800px] mx-auto">
-          <div class="border-b pb-[20px] flex justify-between items-center">
-            <h4 class="">How does Saasco work?</h4>
-            <i class="fa-solid fa-plus text-[24px]"></i>
-          </div>
-          <div class="border-b pb-[20px] mt-[40px] flex justify-between items-center">
-            <h4 class="">Supported platforms</h4>
-            <i class="fa-solid fa-plus text-[24px]"></i>
-          </div>
-          <div class="border-b pb-[20px] mt-[40px] flex justify-between items-center">
-            <h4 class="">Payment methods</h4>
-            <i class="fa-solid fa-plus text-[24px]"></i>
-          </div>
-          <div class="border-b pb-[20px] mt-[40px] flex justify-between items-center">
-            <h4 class="">Help and support</h4>
-            <i class="fa-solid fa-plus text-[24px]"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Faq END -->
-
-    <!-- footer section start -->
-    <footer class="bg-[#1D1E25] pt-[100px] pb-[80px] relative">
-      <div class="absolute right-20 -top-5">
-        <img src="https://i.ibb.co/vv1Pr9c/Element-5.png" alt="">
-      </div>
-      <div class="absolute left-8 top-14">
-        <img src="https://i.ibb.co/mb8r7Mq/Element.png" alt="">
-      </div>
-      <div class="absolute bottom-10">
-        <img src="https://i.ibb.co/gSRDXT3/Element-1.png" alt="">
-      </div>
-      <section class="container mx-auto">
-        <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4">
-          <div>
-            <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Product</p>
-            <ul>
-              <li class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50 ">Email Row</li>
-              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Free
-                Tools</li>
-              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Agents
-              </li>
-              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Blog
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Resources</p>
-            <ul>
-              <li class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50 ">Our Agents</li>
-              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Member
-                Stories</li>
-              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Video
-              </li>
-              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Free
-                trial</li>
-            </ul>
-          </div>
-          <div>
-            <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Company</p>
-            <ul>
-              <li class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50 ">Patnerships</li>
-              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Terms of
-                use</li>
-              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50 ">Privacy
-              </li>
-              <li class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50">Sitemap
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10">Get in touch</p>
-            <p class="font-medium leading-5 text-white opacity-50">You’ll find your next Marketing valu you prefer.</p>
-            <div class="flex items-center gap-3 mt-[62px]">
-              <div class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white">
-                <i class="fa-brands fa-facebook-f"></i>
+    <main>
+      <!-- hero section start -->
+      <section class="relative mb-[100px] lg:mb-[50px]">
+        <div class="container mx-auto pt-[55px]">
+          <div
+            class="flex items-center justify-between lg:flex-row flex-col gap-20"
+          >
+            <div class="lg:w-[570px]">
+              <div class="mb-[24px] relative">
+                <div
+                  class="absolute top-[-100px] md:block hidden lg:left-[-50px]"
+                >
+                  <img src="https://i.ibb.co/9Nr2g0K/Vector-1.png" alt="" />
+                </div>
+                <h1 class="">
+                  We help to create easy
+                  <span class="text_primary"> process </span>
+                </h1>
               </div>
-              <div class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white">
-                <i class="fa-brands fa-twitter"></i>
+              <div class="">
+                <p
+                  class="text-[18px] text-[#808D9E] font-medium leading-[28px] mb-[48px]"
+                >
+                  There is a time management facility through this modern
+                  software. Effective time management allows you to achieve
+                  great results .
+                </p>
+                <div class="">
+                  <button
+                    class="text-white text-[16px] font-bold rounded-[8px] px-[32px] py-[16px] bg_primary"
+                  >
+                    Get started now
+                  </button>
+                </div>
               </div>
-              <div class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white">
-                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <!-- ******************** -->
+            <div class="relative z-10">
+              <div class="">
+                <!-- blackCircleBG -->
+                <div
+                  class="bg-black lg:w-[500px] w-[380px] z-[-5] h-[550px] relative rounded-[24px]"
+                >
+                  <div class="absolute bottom-0 md:right-[-20%]">
+                    <img
+                      class=""
+                      src="https://i.ibb.co/CV7zdyb/Img-5.png"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class="absolute right-[-10%] md:block hidden top-[20%] z-[-1]"
+                  >
+                    <div
+                      class="w-[200px] relative bg-white features_Shadow rounded-[8px]"
+                    >
+                      <div class="px-[20px] py-[30px]">
+                        <div class="flex justify-between">
+                          <div class="">
+                            <div class="flex gap-5 items-center">
+                              <div
+                                class="h-[5px] w-[5px] rounded-full bg_primary"
+                              ></div>
+                              <p class="text-[14px] font-bold">$500+</p>
+                            </div>
+                            <p
+                              class="text-[#808D9E] text-[10px] font-medium text-center pl-[15px]"
+                            >
+                              Earn per day
+                            </p>
+                          </div>
+                          <div class="">
+                            <div class="flex gap-5 items-center">
+                              <div
+                                class="h-[5px] w-[5px] rounded-full bg-[#D9E8FF]"
+                              ></div>
+                              <p class="text-[14px] font-bold">$50</p>
+                            </div>
+                            <p
+                              class="text-[#808D9E] text-[10px] font-medium text-center pl-[15px]"
+                            >
+                              Pay us
+                            </p>
+                          </div>
+                        </div>
+                        <div class="mt-[28px] flex items-center justify-center">
+                          <img
+                            src="https://i.ibb.co/SJYjxcw/Shape.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="text-center">
+                          <p class="text-[19px] font-bold">$15,000+</p>
+                          <p class="text-[#808D9E] text-[10px]">Earning</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="bg_primary absolute rounded-[9px] bottom-[7%] right-[-17%]"
+                    >
+                      <div class="py-[15px] px-[14px]">
+                        <p class="text-white font-bold text-[10px] mb-[13px]">
+                          Dashboard
+                        </p>
+                        <img
+                          src="https://i.ibb.co/JKM7Zp8/Shape-1.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="absolute left-[-10%] top-0 md:top-20">
+                  <img
+                    class=""
+                    src="https://i.ibb.co/KwYYhrB/Element-7.png"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="flex items-center justify-between flex-wrap mt-[80px]">
-          <div>
-            <p class="text-[30px] font-bold italic text-white">Sasrico<span class="text-primary">.</span></p>
+        <div
+          class="absolute bottom-10 md:bottom-10 lg:top-52 right-0 lg:left-[130px]"
+        >
+          <img class="-z-10" src="https://i.ibb.co/6gVDndv/Line.png" alt="" />
+        </div>
+      </section>
+      <!-- hero section end -->
+      <!-- fetures section start -->
+      <section class="container mx-auto mt-[150px] relative">
+        <div class="absolute -left-8 sm:block hidden">
+          <img src="https://i.ibb.co/02KmH4L/Element-2.png" alt="" />
+        </div>
+        <div class="md:w-[610px] mx-auto">
+          <p
+            class="text-[14px] text_primary text-center mb-3 font-bold leading-5 tracking-[-0.05px]"
+          >
+            Features
+          </p>
+          <h1
+            class="!text-[60px] leading-[64px] tracking-[0.0.3em] text-center"
+          >
+            <span class="text_primary">Paying off</span> and adjust your
+            strategy.
+          </h1>
+        </div>
+        <div
+          class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 mt-16 mb-24"
+        >
+          <div class="bg-white px-6 py-9 rounded-2xl feturesCard">
+            <i class="fi fi-rs-settings text-[24px] text_primary"></i>
+            <p
+              class="text-[24px] font-bold mb-4 leading-[30px] mt-8 tracking-[-1px]"
+            >
+              Analyze your data
+            </p>
+            <p class="text-[#808D9E] font-medium leading-6">
+              Resource management is the process of pre-planning,
+            </p>
           </div>
-          <div>
-            <p class="font-medium text-white opacity-50">Copyright 2020.com, All rights reserved.</p>
+          <div class="bg-white px-6 py-9 rounded-2xl feturesCard md:mt-16">
+            <i class="fa-solid fa-chart-line text-[24px] text_primary"></i>
+            <p
+              class="text-[24px] font-bold mb-4 leading-[30px] mt-8 tracking-[-1px]"
+            >
+              Embedded analytics
+            </p>
+            <p class="text-[#808D9E] font-medium leading-6">
+              Resource management is the process of pre-planning,
+            </p>
+          </div>
+          <div class="bg-white px-6 py-9 rounded-2xl feturesCard">
+            <i class="fi fi-rr-users text-[24px] text_primary"></i>
+            <p
+              class="text-[24px] font-bold mb-4 leading-[30px] mt-8 tracking-[-1px]"
+            >
+              Collaborate securely
+            </p>
+            <p class="text-[#808D9E] font-medium leading-6">
+              Resource management is the process of pre-planning,
+            </p>
+          </div>
+          <div class="bg-white px-6 py-9 rounded-2xl feturesCard md:mt-16">
+            <div>
+              <img src="./assests//images/icon/file.png" alt="" />
+            </div>
+            <p
+              class="text-[24px] font-bold mb-4 leading-[30px] mt-8 tracking-[-1px]"
+            >
+              Unified reporting
+            </p>
+            <p class="text-[#808D9E] font-medium leading-6">
+              Resource management is the process of pre-planning,
+            </p>
           </div>
         </div>
       </section>
-    </footer>
-    <!-- footer section end -->
+      <!-- fetures section end -->
 
-  </main>
+      <!-- Our process START -->
+      <section class="mt-[40px] overflow-hidden">
+        <div class="secondary-container mx-auto">
+          <div class="bg-[#FF4847] z-[-5] w-full rounded-[32px] relative">
+            <div class="">
+              <img
+                class="absolute right-0 bottom-0 z-[-10]"
+                src="https://i.ibb.co/CKbV084/Element-1.png"
+                alt=""
+              />
+            </div>
+            <!-- Transform Work -->
+            <div class="f_f"></div>
+            <div class="py-[116px] ml-[20px] lg:ml-[80px]">
+              <div
+                class="flex gap-[50px] lg:gap-12 md:felx-r0w flex-col md:flex-row items-center mb-[48px]"
+              >
+                <div class="mt-[16px]">
+                  <p class="text-[16px] font-bold leading-[20px] text-white">
+                    OUR PROCESS
+                  </p>
+                  <h2 class="text-white">
+                    Standard <br class="md:block hidden" />
+                    work process
+                  </h2>
+                </div>
+                <div class="text-white lg:ml-[200px]">
+                  <p class="text-[16px] font-medium">
+                    Resource management is the <br />
+                    process of pre-planning, scheduli
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex lg:flex-row flex-col justify-between gap-[20px] items-center mr-10"
+              >
+                <div class="lg:w-[470px]">
+                  <div class="">
+                    <div class="flex items-center gap-[20px] mb-[36px]">
+                      <p
+                        class="px-[24px] py-[15px] font-bold text-white bg-black rounded-full text-[20px]"
+                      >
+                        1
+                      </p>
+                      <div class="">
+                        <p class="text-[20px] font-bold text-white mb-[10px]">
+                          Choose plan
+                        </p>
+                        <p class="text-[16px] font-medium text-white">
+                          Subscribe to a plan that suits you better and place
+                          orders as many as you want.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-[20px] mb-[36px]">
+                      <p
+                        class="px-[24px] py-[15px] font-bold text-white bg-black rounded-full text-[20px]"
+                      >
+                        2
+                      </p>
+                      <div class="">
+                        <p class="text-[20px] font-bold text-white mb-[10px]">
+                          Make payment
+                        </p>
+                        <p class="text-[16px] font-medium text-white">
+                          Subscribe to a plan that suits you better and place
+                          orders as many as you want.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-[20px] mb-[36px]">
+                      <p
+                        class="px-[24px] py-[15px] font-bold text-white bg-black rounded-full text-[20px]"
+                      >
+                        3
+                      </p>
+                      <div class="">
+                        <p class="text-[20px] font-bold text-white mb-[10px]">
+                          Install and feel
+                        </p>
+                        <p class="text-[16px] font-medium text-white">
+                          Subscribe to a plan that suits you better and place
+                          orders as many as you want.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- **** -->
+                <div class="relative md:w-[500px]">
+                  <div class="">
+                    <img
+                      class=""
+                      src="https://i.ibb.co/rdBDMjR/Img-3.png"
+                      alt=""
+                    />
+                    <div
+                      class="absolute bottom-[7%] left-[-10%] overflow-hidden"
+                    >
+                      <img
+                        src="https://i.ibb.co/DGL3svs/Element-23.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Our process END -->
 
-  <!-- navbar script -->
-  <script src="/assests/script/nav.js"></script>
-  <script>
-    var swiper = new Swiper(".swiper-container", {
-      // Optional parameters
-      autoplay: {
-        delay: 1000,
-        disableOnInteraction: false,
-      },
-      direction: "horizontal",
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 10,
-      // Responsive breakpoints
-      breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 20
+      <!-- Our strategy START -->
+      <section class="pt-[150px]">
+        <div class="relative">
+          <div class="absolute bottom-[-20%] left-0 z-[-1] hidden lg:block">
+            <img src="https://i.ibb.co/PN09cHH/Vector-620.png" alt="" />
+          </div>
+          <div class="container mx-auto">
+            <div
+              class="flex lg:flex-row flex-col justify-between gap-32 items-center"
+            >
+              <div
+                class="flex md:flex-row flex-col justify-center lg:justify-normal gap-14 items-center relative lg:w-[470px]"
+              >
+                <div class="absolute top-[-2%] right-0">
+                  <img src="https://i.ibb.co/HNnyzxr/Element-24.png" alt="" />
+                </div>
+                <div class="w-full">
+                  <img
+                    class="w-full"
+                    src="https://i.ibb.co/bBhQ1vv/Img-4.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- collaborate -->
+              <div class="">
+                <div class="">
+                  <div class="mb-[30px]">
+                    <p
+                      class="text-[16px] font-bold leading-[20px] text_primary mb-[16px]"
+                    >
+                      OUR STRATEGY
+                    </p>
+                    <h2>
+                      Find out what <br class="lg:block hidden" />
+                      we've <span class="text_primary">achieved</span
+                      ><br class="lg:block hidden" />
+                      for you
+                    </h2>
+                  </div>
+                  <div class="mb-[48px]">
+                    <div class="flex lg:flex-row flex-col gap-[12px] md:gap-12">
+                      <div class="">
+                        <li class="flex items-center gap-3 mb-[12px]">
+                          <i class="fa-solid fa-circle-check text-[18px]"></i>
+                          <p class="text-[18px] font-medium leading-[28px]">
+                            Organize your data
+                          </p>
+                        </li>
+                        <li class="flex items-center gap-3 mb-[12px]">
+                          <i class="fa-solid fa-circle-check text-[18px]"></i>
+                          <p class="text-[18px] font-medium leading-[28px]">
+                            Work with any team
+                          </p>
+                        </li>
+                        <li class="flex items-center gap-3">
+                          <i class="fa-solid fa-circle-check text-[18px]"></i>
+                          <p class="text-[18px] font-medium leading-[28px]">
+                            Business analytics
+                          </p>
+                        </li>
+                      </div>
+                      <div class="">
+                        <li class="flex items-center gap-3 mb-[12px]">
+                          <i class="fa-solid fa-circle-check text-[18px]"></i>
+                          <p class="text-[18px] font-medium leading-[28px]">
+                            Always in sync
+                          </p>
+                        </li>
+                        <li class="flex items-center gap-3 mb-[12px]">
+                          <i class="fa-solid fa-circle-check text-[18px]"></i>
+                          <p class="text-[18px] font-medium leading-[28px]">
+                            Embedded analytics
+                          </p>
+                        </li>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="text-[16px] leading-[20px] font-bold text-white bg_primary px-[32px] py-[16px] rounded-[8px]"
+                  >
+                    Get started now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Our strategy END -->
+
+      <section class="mt-32 mb-32">
+        <div class="container mx-auto">
+          <p
+            class="text-[18px] text-secondary text-center font-medium leading-7"
+          >
+            Pricing plan
+          </p>
+          <h1
+            class="!text-[60px] leading-[64px] tracking-[-0.03em] text-center mt-4"
+          >
+            Simple but effective
+          </h1>
+          <div class="flex gap-8 justify-center mt-11">
+            <h6 class="leading-[26px] tracking-[-1px]">Pay Monthly</h6>
+            <div id="switchBtn" class="">
+              <div
+                class="h-[24px] w-[24px] bg-white rounded-full cursor-pointer"
+              ></div>
+            </div>
+            <h6 class="leading-[26px] tracking-[-1px]">Pay Yearly</h6>
+          </div>
+          <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-[30px] mt-[100px]">
+            <div
+              class="h-[512px] pricingCard border border-[#E9ECF2] rounded-[16px] px-8 py-[60px]"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-[#FF4847] leading-[42px] tracking-[-0.02em]">
+                  Free
+                </h3>
+                <p class="text-[18px] font-medium leading-7">Starter</p>
+              </div>
+              <p class="font-bold leading-5 tracking-[-1px] mt-1">/month</p>
+              <ul class="grid gap-3 mt-[46px]">
+                <li
+                  class="text-[18px] font-medium leading-7 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check"></i>
+                  <p>Online transactions</p>
+                </li>
+                <li
+                  class="text-[18px] font-medium leading-7 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check"></i>
+                  <p>ATH withdrawals</p>
+                </li>
+                <li
+                  class="text-[18px] font-medium leading-7 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check"></i>
+                  <p>Easy control</p>
+                </li>
+                <li
+                  class="text-[18px] font-medium leading-7 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check"></i>
+                  <p>Location-based security</p>
+                </li>
+                <li
+                  class="text-[18px] font-medium leading-7 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check"></i>
+                  <p>Online Banking</p>
+                </li>
+              </ul>
+              <button
+                class="font-medium leading-5 tracking-[-0.5px] mt-12 text-white px-7 py-3 rounded-[8px] bg-[#1D1E25]"
+              >
+                Choose plan
+              </button>
+            </div>
+            <div
+              class="h-[512px] pricingCard border border-[#E9ECF2] rounded-[16px] px-8 py-[60px]"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-[#FF4847] leading-[42px] tracking-[-0.02em]">
+                  $49
+                </h3>
+                <p class="text-[18px] font-medium leading-7">Premium</p>
+              </div>
+              <p class="font-bold leading-5 tracking-[-1px] mt-1">/month</p>
+              <ul class="grid gap-3 mt-[46px]">
+                <li
+                  class="text-[18px] font-medium leading-7 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check"></i>
+                  <p>Online transactions</p>
+                </li>
+                <li
+                  class="text-[18px] font-medium leading-7 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check"></i>
+                  <p>ATH withdrawals</p>
+                </li>
+                <li
+                  class="text-[18px] font-medium leading-7 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check"></i>
+                  <p>Easy control</p>
+                </li>
+                <li
+                  class="text-[18px] font-medium leading-7 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check"></i>
+                  <p>Location-based security</p>
+                </li>
+                <li
+                  class="text-[18px] font-medium leading-7 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check"></i>
+                  <p>Online Banking</p>
+                </li>
+              </ul>
+              <button
+                class="font-medium leading-5 tracking-[-0.5px] mt-12 text-white px-7 py-3 rounded-[8px] bg-[#1D1E25]"
+              >
+                Choose plan
+              </button>
+            </div>
+            <div
+              class="h-[512px] pricingCard border border-[#E9ECF2] rounded-[16px] px-8 py-[60px]"
+            >
+              <div class="flex justify-between">
+                <h3 class="text-[#FF4847] leading-[42px] tracking-[-0.02em]">
+                  $49
+                </h3>
+                <p class="text-[18px] font-medium leading-7">Ultimate</p>
+              </div>
+              <p class="font-bold leading-5 tracking-[-1px] mt-1">/month</p>
+              <ul class="grid gap-3 mt-[46px]">
+                <li
+                  class="text-[18px] font-medium leading-7 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check"></i>
+                  <p>Online transactions</p>
+                </li>
+                <li
+                  class="text-[18px] font-medium leading-7 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check"></i>
+                  <p>ATH withdrawals</p>
+                </li>
+                <li
+                  class="text-[18px] font-medium leading-7 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check"></i>
+                  <p>Easy control</p>
+                </li>
+                <li
+                  class="text-[18px] font-medium leading-7 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check"></i>
+                  <p>Location-based security</p>
+                </li>
+                <li
+                  class="text-[18px] font-medium leading-7 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check"></i>
+                  <p>Online Banking</p>
+                </li>
+              </ul>
+              <button
+                class="font-medium leading-5 tracking-[-0.5px] mt-12 text-white px-7 py-3 rounded-[8px] bg-[#1D1E25]"
+              >
+                Choose plan
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- testimonials section start -->
+      <section class="relative">
+        <div class="absolute sm:-bottom-[15%] -bottom-[10%]">
+          <img src="https://i.ibb.co/XJQsvFp/Line-3.png" alt="" />
+        </div>
+        <div class="absolute right-[25%] sm:-bottom-[15%] -bottom-[10%]">
+          <img src="https://i.ibb.co/HPQ839B/Element-3.png" alt="" />
+        </div>
+        <div
+          class="secondary-container mx-auto overflow-hidden mt-32 rounded-[32px] mb-40"
+        >
+          <div class="flex justify-end -mr-8">
+            <div class="flex w-[40%] relative">
+              <div
+                class="h-[56px] bg-[#1D1E25] w-[35%] -mr-8 skew-x-[-35deg]"
+              ></div>
+              <div class="h-[56px] bg-[#1D1E25] w-[65%]"></div>
+              <div class="absolute right-[65%] -bottom-12">
+                <img src="https://i.ibb.co/RShNZJ0/Vector-1.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#1D1E25] p-[50px]">
+            <p
+              class="text-[14px] uppercase text_primary font-bold leading-5 tracking-[-0.05px] mb-5"
+            >
+              testimonials
+            </p>
+            <div class="flex justify-between flex-wrap gap-3">
+              <div class="w-[650px]">
+                <h1 class="leading-[64px] tracking-[-0.03em] text-white">
+                  See what our <span class="text_primary">customers</span> had
+                  to say
+                </h1>
+              </div>
+              <div>
+                <button
+                  class="text-white font-bold leading-5 tracking-[-0.05px] bg_primary px-6 py-3 rounded-md"
+                >
+                  View all
+                </button>
+              </div>
+            </div>
+            <div class="mt-[64px]">
+              <div class="swiper-container overflow-hidden">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="bg-white px-6 py-8 rounded-[16px]">
+                      <div class="flex gap-2 items-center">
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                      </div>
+                      <p
+                        class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]"
+                      >
+                        “Our members are so impressed. It's intuitive. It's
+                        clean. It's distraction free. If you're building a
+                        community.
+                      </p>
+                      <div>
+                        <p
+                          class="text-[20px] font-bold leading-[26px] tracking-[-1px]"
+                        >
+                          Sabo Masties
+                        </p>
+                        <p class="text-[14px] leading-[22px]">
+                          Founder @ Rolex
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="bg-white px-6 py-8 rounded-[16px]">
+                      <div class="flex gap-2 items-center">
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                      </div>
+                      <p
+                        class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]"
+                      >
+                        I could not be more thrilled that I ended up deciding on
+                        Circle to become the home of the Lightbulb Moment
+                        community.
+                      </p>
+                      <div>
+                        <p
+                          class="text-[20px] font-bold leading-[26px] tracking-[-1px]"
+                        >
+                          John Marko
+                        </p>
+                        <p class="text-[14px] leading-[22px]">
+                          Founder @ Rolex
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="bg-white px-6 py-8 rounded-[16px]">
+                      <div class="flex gap-2 items-center">
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                      </div>
+                      <p
+                        class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]"
+                      >
+                        “Our members are so impressed. It's intuitive. It's
+                        clean. It's distraction free. If you're building a
+                        community.
+                      </p>
+                      <div>
+                        <p
+                          class="text-[20px] font-bold leading-[26px] tracking-[-1px]"
+                        >
+                          John Marko
+                        </p>
+                        <p class="text-[14px] leading-[22px]">
+                          Founder @ Rolex
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="bg-white px-6 py-8 rounded-[16px]">
+                      <div class="flex gap-2 items-center">
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                      </div>
+                      <p
+                        class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]"
+                      >
+                        I could not be more thrilled that I ended up deciding on
+                        Circle to become the home of the Lightbulb Moment
+                        community.
+                      </p>
+                      <div>
+                        <p
+                          class="text-[20px] font-bold leading-[26px] tracking-[-1px]"
+                        >
+                          John Marko
+                        </p>
+                        <p class="text-[14px] leading-[22px]">
+                          Founder @ Rolex
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="bg-white px-6 py-8 rounded-[16px]">
+                      <div class="flex gap-2 items-center">
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                      </div>
+                      <p
+                        class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]"
+                      >
+                        “Our members are so impressed. It's intuitive. It's
+                        clean. It's distraction free. If you're building a
+                        community.
+                      </p>
+                      <div>
+                        <p
+                          class="text-[20px] font-bold leading-[26px] tracking-[-1px]"
+                        >
+                          Sabo Masties
+                        </p>
+                        <p class="text-[14px] leading-[22px]">
+                          Founder @ Rolex
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="bg-white px-6 py-8 rounded-[16px]">
+                      <div class="flex gap-2 items-center">
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                      </div>
+                      <p
+                        class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]"
+                      >
+                        “Our members are so impressed. It's intuitive. It's
+                        clean. It's distraction free. If you're building a
+                        community.
+                      </p>
+                      <div>
+                        <p
+                          class="text-[20px] font-bold leading-[26px] tracking-[-1px]"
+                        >
+                          John Marko
+                        </p>
+                        <p class="text-[14px] leading-[22px]">
+                          Founder @ Rolex
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="bg-white px-6 py-8 rounded-[16px]">
+                      <div class="flex gap-2 items-center">
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                      </div>
+                      <p
+                        class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]"
+                      >
+                        “Our members are so impressed. It's intuitive. It's
+                        clean. It's distraction free. If you're building a
+                        community.
+                      </p>
+                      <div>
+                        <p
+                          class="text-[20px] font-bold leading-[26px] tracking-[-1px]"
+                        >
+                          Sabo Masties
+                        </p>
+                        <p class="text-[14px] leading-[22px]">
+                          Founder @ Rolex
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="bg-white px-6 py-8 rounded-[16px]">
+                      <div class="flex gap-2 items-center">
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                      </div>
+                      <p
+                        class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]"
+                      >
+                        “Our members are so impressed. It's intuitive. It's
+                        clean. It's distraction free. If you're building a
+                        community.
+                      </p>
+                      <div>
+                        <p
+                          class="text-[20px] font-bold leading-[26px] tracking-[-1px]"
+                        >
+                          Sabo Masties
+                        </p>
+                        <p class="text-[14px] leading-[22px]">
+                          Founder @ Rolex
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="bg-white px-6 py-8 rounded-[16px]">
+                      <div class="flex gap-2 items-center">
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                      </div>
+                      <p
+                        class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]"
+                      >
+                        I could not be more thrilled that I ended up deciding on
+                        Circle to become the home of the Lightbulb Moment
+                        community.
+                      </p>
+                      <div>
+                        <p
+                          class="text-[20px] font-bold leading-[26px] tracking-[-1px]"
+                        >
+                          John Marko
+                        </p>
+                        <p class="text-[14px] leading-[22px]">
+                          Founder @ Rolex
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="bg-white px-6 py-8 rounded-[16px]">
+                      <div class="flex gap-2 items-center">
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                      </div>
+                      <p
+                        class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]"
+                      >
+                        “Our members are so impressed. It's intuitive. It's
+                        clean. It's distraction free. If you're building a
+                        community.
+                      </p>
+                      <div>
+                        <p
+                          class="text-[20px] font-bold leading-[26px] tracking-[-1px]"
+                        >
+                          Sabo Masties
+                        </p>
+                        <p class="text-[14px] leading-[22px]">
+                          Founder @ Rolex
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="bg-white px-6 py-8 rounded-[16px]">
+                      <div class="flex gap-2 items-center">
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[#FF9515] text-[16.67px]"
+                        ></i>
+                      </div>
+                      <p
+                        class="font-medium leading-[26px] text-[16px] mt-5 mb-8 tracking-[-0.5px]"
+                      >
+                        I could not be more thrilled that I ended up deciding on
+                        Circle to become the home of the Lightbulb Moment
+                        community.
+                      </p>
+                      <div>
+                        <p
+                          class="text-[20px] font-bold leading-[26px] tracking-[-1px]"
+                        >
+                          John Marko
+                        </p>
+                        <p class="text-[14px] leading-[22px]">
+                          Founder @ Rolex
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- testimonials section end -->
+
+      <!-- Faq START -->
+      <section>
+        <div class="container mx-auto pt-[70px] mb-[150px]">
+          <div class="text-center mb-[64px]">
+            <p class="mb-[16px] text-[14px] font-bold text-[#FF6A55]">FAQ</p>
+            <h2>
+              Anything <span class="text-[#FF4847]">we can help</span> <br />
+              you with?
+            </h2>
+          </div>
+          <div class="lg:w-[800px] mx-auto">
+            <div class="border-b pb-[20px] flex justify-between items-center">
+              <h4 class="">How does Saasco work?</h4>
+              <i class="fa-solid fa-plus text-[24px]"></i>
+            </div>
+            <div
+              class="border-b pb-[20px] mt-[40px] flex justify-between items-center"
+            >
+              <h4 class="">Supported platforms</h4>
+              <i class="fa-solid fa-plus text-[24px]"></i>
+            </div>
+            <div
+              class="border-b pb-[20px] mt-[40px] flex justify-between items-center"
+            >
+              <h4 class="">Payment methods</h4>
+              <i class="fa-solid fa-plus text-[24px]"></i>
+            </div>
+            <div
+              class="border-b pb-[20px] mt-[40px] flex justify-between items-center"
+            >
+              <h4 class="">Help and support</h4>
+              <i class="fa-solid fa-plus text-[24px]"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Faq END -->
+
+      <!-- footer section start -->
+      <footer class="bg-[#1D1E25] pt-[100px] pb-[80px] relative">
+        <div class="absolute right-20 -top-5">
+          <img src="https://i.ibb.co/vv1Pr9c/Element-5.png" alt="" />
+        </div>
+        <div class="absolute left-8 top-14">
+          <img src="https://i.ibb.co/mb8r7Mq/Element.png" alt="" />
+        </div>
+        <div class="absolute bottom-10">
+          <img src="https://i.ibb.co/gSRDXT3/Element-1.png" alt="" />
+        </div>
+        <section class="container mx-auto">
+          <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4">
+            <div>
+              <p
+                class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10"
+              >
+                Product
+              </p>
+              <ul>
+                <li
+                  class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50"
+                >
+                  Email Row
+                </li>
+                <li
+                  class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+                >
+                  Free Tools
+                </li>
+                <li
+                  class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+                >
+                  Agents
+                </li>
+                <li
+                  class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+                >
+                  Blog
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p
+                class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10"
+              >
+                Resources
+              </p>
+              <ul>
+                <li
+                  class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50"
+                >
+                  Our Agents
+                </li>
+                <li
+                  class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+                >
+                  Member Stories
+                </li>
+                <li
+                  class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+                >
+                  Video
+                </li>
+                <li
+                  class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+                >
+                  Free trial
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p
+                class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10"
+              >
+                Company
+              </p>
+              <ul>
+                <li
+                  class="cursor-pointer hover:underline leading-5 font-medium text-white opacity-50"
+                >
+                  Patnerships
+                </li>
+                <li
+                  class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+                >
+                  Terms of use
+                </li>
+                <li
+                  class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+                >
+                  Privacy
+                </li>
+                <li
+                  class="cursor-pointer hover:underline leading-5 my-[20px] font-medium text-white opacity-50"
+                >
+                  Sitemap
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p
+                class="text-[20px] text-white font-bold leading-5 tracking-[-1px] mb-10"
+              >
+                Get in touch
+              </p>
+              <p class="font-medium leading-5 text-white opacity-50">
+                You’ll find your next Marketing valu you prefer.
+              </p>
+              <div class="flex items-center gap-3 mt-[62px]">
+                <div
+                  class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div
+                  class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white"
+                >
+                  <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div
+                  class="h-[32px] w-[32px] rounded-[6px] flex items-center justify-center bg-white"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between flex-wrap mt-[80px]">
+            <div>
+              <p class="text-[30px] font-bold italic text-white">
+                Sasrico<span class="text-primary">.</span>
+              </p>
+            </div>
+            <div>
+              <p class="font-medium text-white opacity-50">
+                Copyright 2020.com, All rights reserved.
+              </p>
+            </div>
+          </div>
+        </section>
+      </footer>
+      <!-- footer section end -->
+    </main>
+
+    <!-- navbar script -->
+    <script src="/assests/script/nav.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        // Optional parameters
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: false,
         },
-        // when window width is >= 480px
-        480: {
-          slidesPerView: 1,
-          spaceBetween: 30
+        direction: "horizontal",
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          // when window width is >= 640px
+          740: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
         },
-        // when window width is >= 640px
-        740: {
-          slidesPerView: 2,
-          spaceBetween: 40
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 40
+      });
+      const switchBtn = document.querySelector("#switchBtn");
+      let isTrue = false;
+      switchBtn.addEventListener("click", () => {
+        // console.log(switchBtn.className='moon');
+        console.log(switchBtn);
+        if (isTrue) {
+          switchBtn.classList.remove("justify-end");
+          isTrue = false;
+          console.log("remove");
+        } else {
+          switchBtn.classList.add("justify-end");
+          isTrue = true;
+          console.log("add");
         }
-      },
-
-    });
-    const switchBtn = document.querySelector('#switchBtn')
-    let isTrue = false;
-    switchBtn.addEventListener('click', () => {
-      // console.log(switchBtn.className='moon');
-      console.log(switchBtn);
-      if (isTrue) {
-        switchBtn.classList.remove('justify-end')
-        isTrue = false
-        console.log('remove');
-      } else {
-        switchBtn.classList.add("justify-end");
-        isTrue = true
-        console.log('add');
-      }
-    })
-  </script>
-</body>
-
+      });
+    </script>
+  </body>
 </html>

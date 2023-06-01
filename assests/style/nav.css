@@ -19,3 +19,25 @@
 .homeChild{
   display: none;
 }
+
+.sub-menu-effect{
+  position: relative;
+  
+}
+.sub-menu-effect:hover{
+  padding-left: 20px;
+}
+.sub-menu-effect:hover ::before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 18px;
+  background: red;
+  top: 50%;
+  left: 0px;
+  animation: hoverEff .3s;
+}
+@keyframes hoverEff{
+  0%{width: 0px;}
+  100%{width: 18px;}
+}
